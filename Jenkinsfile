@@ -1,8 +1,7 @@
-#!groovy
-
 pipeline {
-    agent {
-        docker { image 'python:3' }
+    agent any
+    tools {
+        docker 'Docker'
     }
     options {
         buildDiscarder logRotator(numToKeepStr: '10')
