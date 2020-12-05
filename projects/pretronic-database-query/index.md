@@ -5,20 +5,13 @@
 
 @Todo Supported databases 
 
-
-
-// ---
-
-Project setup 
-
-
-Driver setup
-    Driver config
-    Dynamic config
-
-How to connect 
-
-Database
+Project setup
+    Include in your project
+    Driver config setup
+    Driver setup
+    Database
+    DatabaseCollection
+    Query examples
 
 DDL
     + json file
