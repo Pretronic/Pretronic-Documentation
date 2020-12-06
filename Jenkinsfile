@@ -86,7 +86,7 @@ pipeline {
 
                            files.each{ file ->
                               if(file.directory) {
-                                sh "cp ${file.name}/site/* ../build/${file.name}/ -r"
+                                sh "mkdir ../build/${file.name} && cp ${file.name}/site/* ../build/${file.name}/ -r"
                               }
                            }
                          }
