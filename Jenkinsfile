@@ -88,6 +88,7 @@ pipeline {
                         git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
                         cd Pretronic-Documentation/
                         rm -R ./*
+                        writeFile file: 'CNAME', text: 'docs.pretronic.net'
                         """
                         dir('projects') {
                            def files = findFiles()
@@ -100,6 +101,8 @@ pipeline {
                          }
                         sh """
                         cd build/Pretronic-Documentation/
+                        cp home/* ./ -r
+                        rm -R home/
                         git add . -v
                         git commit -m 'New mkdocs build' -v
                         git push origin HEAD:gh-pages -v

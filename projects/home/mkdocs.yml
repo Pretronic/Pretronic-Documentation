@@ -1,0 +1,47 @@
+site_name: Pretronic Documentation
+site_description:
+site_url: http://docs.pretronic.net/
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+  extra_css:
+    - stylesheets/bootstrap-grid.min.css
+    - stylesheets/style.css
+  icon:
+    repo: fontawesome/brands/github
+  logo: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  favicon: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  palette:
+    scheme: preference
+    primary: 'indigo'
+    accent: 'indigo'
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - admonition
+  - meta
+  - pymdownx.smartsymbols
+  - def_list
+  - pymdownx.tasklist:
+      clickable_checkbox: false
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
+  - stylesheets/bootstrap-grid.min.css
+  - stylesheets/style.css
+
+
+edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/
