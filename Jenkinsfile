@@ -32,7 +32,7 @@ pipeline {
 
 
                         cd template/
-                        git clone --single-branch --branch main ${GIT_TEMPLATE_SSH}
+                        git clone --single-branch --branch master ${GIT_TEMPLATE_SSH}
                         """
                     }
                 }
