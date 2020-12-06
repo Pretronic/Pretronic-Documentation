@@ -13,7 +13,7 @@ pipeline {
                 script {
                     sh """
                     pip3 install --upgrade pip
-                    pip3 install mkdocs-material --user
+                    pip3 install mkdocs-material
 
                     """
                 }
