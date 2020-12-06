@@ -6,6 +6,8 @@ String GIT_DOCS_SSH = "git@github.com:Pretronic/Pretronic-Documentation.git"
 final String CI_NAME = "PretronicCI"
 final String CI_EMAIL = "ci@pretronic.net"
 
+final String CNAME = "docs.pretronic.net"
+
 pipeline {
     agent any
     options {
@@ -88,7 +90,7 @@ pipeline {
                         git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
                         cd Pretronic-Documentation/
                         rm -R ./*
-                        echo docs.pretronic.net > CNAME
+                        echo ${CNAME} > CNAME
                         """
                         dir('projects') {
                            def files = findFiles()
