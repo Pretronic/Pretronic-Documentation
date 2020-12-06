@@ -1,6 +1,7 @@
 String PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID = "1c1bd183-26c9-48aa-94ab-3fe4f0bb39ae"
 
 String GIT_TEMPLATE_SSH = "git@github.com:Pretronic/Pretronic-Dokumentation-Template.git"
+String GIT_DOCS_SSH = "git@github.com:Pretronic/Pretronic-Documentation.git"
 
 pipeline {
     agent any
@@ -47,7 +48,6 @@ pipeline {
 
                        files.each{ file ->
                           if(file.directory) {
-                            echo "This is directory: ${file.name} "
                             sh "cp ../template/Pretronic-Dokumentation-Template/* ${file.name}/ -r"
                           }
                        }
@@ -58,34 +58,40 @@ pipeline {
         stage("Build mkdocs") {
             steps {
                 script {
-                    sh """
-                    for d in projects/ ; do
-                        echo "$d"
-                        ( cd $d ; mkdocs build )
-                    done
-                    """
+                    dir('projects') {
+                       def files = findFiles()
+
+                       files.each{ file ->
+                          if(file.directory) {
+                            sh "mkdocs build"
+                          }
+                       }
+                     }
                 }
             }
         }
-        stage("Move builds") {
+        stage("Deploy builds") {
             steps {
                 script {
                     sh """
-                    for d in projects/ ; do
-                        mkdir build/$d
-                        mv $d/* build/$d
-                    done
+                    cd build/
+                    git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
+                    cd Pretronic-Documentation/
+                    rm -R ./*
                     """
-                }
-            }
-        }
-        stage("Push builds") {
-            steps {
-                script {
-                    sh"""
+                    dir('projects') {
+                       def files = findFiles()
+
+                       files.each{ file ->
+                          if(file.directory) {
+                            sh "cp ${file.name}/site/* ../build/${file.name}/ -r"
+                          }
+                       }
+                     }
+                    sh """
                     git add build -v
                     git commit -m 'New mkdocs build' -- build -v
-                    git push origin HEAD:main -v
+                    git push origin HEAD:gh-pages -v
                     """
                 }
             }
