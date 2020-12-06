@@ -12,8 +12,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                    pip install --upgrade pip
-                    pip install mkdocs-material
+                    pip3 install --upgrade pip
+                    pip3 install mkdocs-material --user
 
                     """
                 }
