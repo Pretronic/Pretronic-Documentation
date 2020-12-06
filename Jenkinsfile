@@ -3,6 +3,9 @@ String PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID = "1c1bd183-26c9-48aa-94ab-3fe4f0bb39a
 String GIT_TEMPLATE_SSH = "git@github.com:Pretronic/Pretronic-Dokumentation-Template.git"
 String GIT_DOCS_SSH = "git@github.com:Pretronic/Pretronic-Documentation.git"
 
+final String CI_NAME = "PretronicCI"
+final String CI_EMAIL = "ci@pretronic.net"
+
 pipeline {
     agent any
     options {
@@ -75,6 +78,11 @@ pipeline {
             steps {
                 script {
                     sshagent([PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID]) {
+                        sh """
+                        git config --global user.name '$CI_NAME' -v
+                        git config --global user.email '$CI_EMAIL' -v
+                        """
+
                         sh """
                         cd build/
                         git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
