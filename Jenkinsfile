@@ -48,7 +48,12 @@ pipeline {
                        files.each{ file ->
                           if(file.directory) {
                             echo "This is directory: ${file.name} "
-                            sh "mv template/Pretronic-Dokumentation-Template/* projects/${file.name}"
+                            fileOperations([fileCopyOperation(
+                              excludes: '',
+                              flattenFiles: false,
+                              includes: 'template/Pretronic-Dokumentation-Template/',
+                              targetLocation: "projects/${file.name}"
+                            )])
                           }
                        }
                      }
