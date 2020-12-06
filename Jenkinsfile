@@ -88,7 +88,7 @@ pipeline {
                         git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
                         cd Pretronic-Documentation/
                         rm -R ./*
-                        writeFile file: './CNAME', text: 'docs.pretronic.net'
+                        echo docs.pretronic.net > CNAME
                         """
                         dir('projects') {
                            def files = findFiles()
