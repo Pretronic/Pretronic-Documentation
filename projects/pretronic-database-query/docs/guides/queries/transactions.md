@@ -2,6 +2,8 @@
 title: Transactions
 ---
 
+# Transactions
+
 A transaction is a series of different queries that are related to each other and are executed in different steps of 
 the application logic. Transaction gives you the possibilities to rollback your database actions if your code fails, or 
 you want user give an option to cancel an ongoing process.
@@ -12,7 +14,7 @@ Transactions are normally used when multiple queries need to be executed without
 A simple example is moving an amount form one bank account to another. 
 Both queries must be completed successfully in order not to lose money or generate duplicate amounts.
 
-# Open a new transaction
+## Open a new transaction
 
 A new transaction is opened with `.transact()` on a database or collection object. 
 A transaction is alive until it is committed or rollbacked, after that you have to open a new transaction.
@@ -30,7 +32,7 @@ transaction.execute(balances.update().add("Id",9.99).where("Id",6562));
 
 ```
 
-# Commit a transaction
+### Commit a transaction
 
 When your process is completed and all queries have been executed, close the transaction with `.commit()`
 to tell the database that everything worked. 
@@ -39,7 +41,7 @@ to tell the database that everything worked.
 transaction.commit();
 ```
 
-# Rollback a transaction
+### Rollback a transaction
 
 Should your code fail or a user aborts the process, use `.rollback()` to tell the database to cancel 
 everything, changes will than no longer apply. This part is usually placed in a catch statement.
@@ -49,7 +51,7 @@ transaction.rollback();
 ```
 
 
-# Sample implementation
+## Sample implementation
 
 This code below shows a small example of how to use a transaction.
 
