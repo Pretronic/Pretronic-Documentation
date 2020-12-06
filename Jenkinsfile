@@ -49,7 +49,7 @@ pipeline {
 
                        files.each{ file ->
                           if(file.directory) {
-                            sh "cp ../template/Pretronic-Dokumentation-Template/* ${file.name}/ -n"
+                            sh "cp ../template/Pretronic-Dokumentation-Template/* ${file.name}/ -r -n"
                           }
                        }
                      }
