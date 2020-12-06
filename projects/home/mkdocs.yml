@@ -36,6 +36,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - git-revision-date
 
 extra_css:
   - stylesheets/dark_theme.css
@@ -44,4 +45,4 @@ extra_css:
   - stylesheets/style.css
 
 
-edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/
+edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/docs/
