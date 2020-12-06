@@ -48,7 +48,7 @@ pipeline {
                        files.each{ file ->
                           if(file.directory) {
                             echo "This is directory: ${file.name} "
-                            sh "cp template/Pretronic-Dokumentation-Template/* projects/${file.name}/ -r"
+                            sh "cp ../template/Pretronic-Dokumentation-Template/* ${file.name}/ -r"
                           }
                        }
                      }
