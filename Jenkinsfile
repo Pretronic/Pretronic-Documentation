@@ -45,10 +45,10 @@ pipeline {
                     dir('projects') {
                        def files = findFiles()
 
-                       files.each{ f ->
-                          if(f.directory) {
-                            echo "This is directory: ${f.name} "
-                            sh "mv /template/* $d"
+                       files.each{ file ->
+                          if(file.directory) {
+                            echo "This is directory: ${file.name} "
+                            sh "mv /template/* ${file.name}"
                           }
                        }
                      }
