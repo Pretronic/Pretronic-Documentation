@@ -74,26 +74,28 @@ pipeline {
         stage("Deploy builds") {
             steps {
                 script {
-                    sh """
-                    cd build/
-                    git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
-                    cd Pretronic-Documentation/
-                    rm -R ./*
-                    """
-                    dir('projects') {
-                       def files = findFiles()
+                    sshagent([PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID]) {
+                        sh """
+                        cd build/
+                        git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
+                        cd Pretronic-Documentation/
+                        rm -R ./*
+                        """
+                        dir('projects') {
+                           def files = findFiles()
 
-                       files.each{ file ->
-                          if(file.directory) {
-                            sh "cp ${file.name}/site/* ../build/${file.name}/ -r"
-                          }
-                       }
-                     }
-                    sh """
-                    git add build -v
-                    git commit -m 'New mkdocs build' -- build -v
-                    git push origin HEAD:gh-pages -v
-                    """
+                           files.each{ file ->
+                              if(file.directory) {
+                                sh "cp ${file.name}/site/* ../build/${file.name}/ -r"
+                              }
+                           }
+                         }
+                        sh """
+                        git add build -v
+                        git commit -m 'New mkdocs build' -- build -v
+                        git push origin HEAD:gh-pages -v
+                        """
+                    }
                 }
             }
         }
