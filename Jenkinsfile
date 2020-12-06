@@ -94,12 +94,12 @@ pipeline {
 
                            files.each{ file ->
                               if(file.directory) {
-                                sh "mkdir ../build/${file.name} && cp ${file.name}/site/* ../build/${file.name}/ -r"
+                                sh "mkdir ../build/Pretronic-Documentation/${file.name} && cp ${file.name}/site/* ../build/Pretronic-Documentation/${file.name}/ -r"
                               }
                            }
                          }
                         sh """
-                        cd build/
+                        cd build/Pretronic-Documentation/
                         git add . -v
                         git commit -m 'New mkdocs build' -v
                         git push origin HEAD:gh-pages -v
