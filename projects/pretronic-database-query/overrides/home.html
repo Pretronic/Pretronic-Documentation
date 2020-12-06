@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+<style>
+    .md-header {
+        position: initial !important;
+    }
+    .md-main__inner {
+        margin: 0 !important;
+    }
+    .md-content, .md-sidebar--secondary, .md-sidebar--primary {
+        display: none !important;
+    }
+</style>
+
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="page-container">
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h1>{{config.site_name}}</h1>
+                    <p>{{config.site_description}}</p>
+                    <a href="{{ page.next_page.url | url }}"
+                       class="md-button md-button--primary"
+                    >
+                        Get started
+                    </a>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <img src="{{config.site_url}}images/overview.png"  alt="Overview Image"/>
+                </div>
+            </div>
+
+            <h4>Supported Databases</h4>
+
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 product-info">
+                    <div>
+                        <div class="img-container">
+                            <img src="{{config.site_url}}images/databases/mariadb.jpg" alt="MariaDB"  width="80"/>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>MariaDB</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-info">
+                    <div>
+                        <div class="img-container">
+                            <img src="{{config.site_url}}images/databases/mysql.png" alt="MySQL"  width="70"/>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>MySQL</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-info">
+                    <div>
+                        <div class="img-container">
+                            <img src="{{config.site_url}}images/databases/postgresql.png" alt="PostgreSQL"  width="110"/>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>PostgreSQL</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-info">
+                    <div>
+                        <div class="img-container">
+                            <img src="{{config.site_url}}images/databases/mssql.png" alt="MS-SQL"  width="70"/>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Microsoft SQL Server</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-info">
+                    <div>
+                        <div class="img-container">
+                            <img src="{{config.site_url}}images/databases/h2.jpg" alt="H2 portable" width="80"/>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>H2 Portable</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-info">
+                    <div>
+                        <div class="img-container">
+                            <img src="{{config.site_url}}images/databases/mongodb.png" alt="MongoDB"  width="80"/>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>MongoDB</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
