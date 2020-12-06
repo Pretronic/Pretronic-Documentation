@@ -92,7 +92,7 @@ pipeline {
                          }
                         sh """
                         git add build -v
-                        git commit -m 'New mkdocs build' -- build -v
+                        git commit -m -v 'New mkdocs build' -- build
                         git push origin HEAD:gh-pages -v
                         """
                     }
