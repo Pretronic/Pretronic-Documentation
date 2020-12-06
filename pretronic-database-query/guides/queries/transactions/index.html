@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#use-case" class="md-skip">
+        <a href="#transactions" class="md-skip">
           Skip to content
         </a>
       
@@ -535,9 +535,72 @@
     
     
     
+    <label class="md-nav__link md-nav__link--active" for="__toc">
+        Transactions
+        <span class="md-nav__icon md-icon"></span>
+    </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
         Transactions
     </a>
+    
+    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-case" class="md-nav__link">
+    Use case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-a-new-transaction" class="md-nav__link">
+    Open a new transaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Open a new transaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commit-a-transaction" class="md-nav__link">
+    Commit a transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback-a-transaction" class="md-nav__link">
+    Rollback a transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-implementation" class="md-nav__link">
+    Sample implementation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
 </li>
 
@@ -630,6 +693,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-case" class="md-nav__link">
+    Use case
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-a-new-transaction" class="md-nav__link">
+    Open a new transaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Open a new transaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commit-a-transaction" class="md-nav__link">
+    Commit a transaction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback-a-transaction" class="md-nav__link">
+    Rollback a transaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-implementation" class="md-nav__link">
+    Sample implementation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -645,14 +757,15 @@
                   </a>
                 
                 
-                <p>A transaction is a series of different queries that are related to each other and are executed in different steps of 
+                <h1 id="transactions">Transactions<a class="headerlink" href="#transactions" title="Permanent link">&para;</a></h1>
+<p>A transaction is a series of different queries that are related to each other and are executed in different steps of 
 the application logic. Transaction gives you the possibilities to rollback your database actions if your code fails, or 
 you want user give an option to cancel an ongoing process.</p>
 <h2 id="use-case">Use case<a class="headerlink" href="#use-case" title="Permanent link">&para;</a></h2>
 <p>Transactions are normally used when multiple queries need to be executed without any errors.
 A simple example is moving an amount form one bank account to another. 
 Both queries must be completed successfully in order not to lose money or generate duplicate amounts.</p>
-<h1 id="open-a-new-transaction">Open a new transaction<a class="headerlink" href="#open-a-new-transaction" title="Permanent link">&para;</a></h1>
+<h2 id="open-a-new-transaction">Open a new transaction<a class="headerlink" href="#open-a-new-transaction" title="Permanent link">&para;</a></h2>
 <p>A new transaction is opened with <code>.transact()</code> on a database or collection object. 
 A transaction is alive until it is committed or rollbacked, after that you have to open a new transaction.</p>
 <p>Unlike using <code>.execute()</code> on the query itself, you pass your query to the transaction object.
@@ -662,17 +775,17 @@ The transaction will then execute the query in an isolated thread on the databas
 
 <span class="n">transaction</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="n">balances</span><span class="p">.</span><span class="na">update</span><span class="p">().</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">,</span><span class="mf">9.99</span><span class="p">).</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">,</span><span class="mi">6562</span><span class="p">));</span>
 </code></pre></div>
-<h1 id="commit-a-transaction">Commit a transaction<a class="headerlink" href="#commit-a-transaction" title="Permanent link">&para;</a></h1>
+<h3 id="commit-a-transaction">Commit a transaction<a class="headerlink" href="#commit-a-transaction" title="Permanent link">&para;</a></h3>
 <p>When your process is completed and all queries have been executed, close the transaction with <code>.commit()</code>
 to tell the database that everything worked. </p>
 <div class="highlight"><pre><span></span><code><span class="n">transaction</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span>
 </code></pre></div>
-<h1 id="rollback-a-transaction">Rollback a transaction<a class="headerlink" href="#rollback-a-transaction" title="Permanent link">&para;</a></h1>
+<h3 id="rollback-a-transaction">Rollback a transaction<a class="headerlink" href="#rollback-a-transaction" title="Permanent link">&para;</a></h3>
 <p>Should your code fail or a user aborts the process, use <code>.rollback()</code> to tell the database to cancel 
 everything, changes will than no longer apply. This part is usually placed in a catch statement.</p>
 <div class="highlight"><pre><span></span><code><span class="n">transaction</span><span class="p">.</span><span class="na">rollback</span><span class="p">();</span>
 </code></pre></div>
-<h1 id="sample-implementation">Sample implementation<a class="headerlink" href="#sample-implementation" title="Permanent link">&para;</a></h1>
+<h2 id="sample-implementation">Sample implementation<a class="headerlink" href="#sample-implementation" title="Permanent link">&para;</a></h2>
 <p>This code below shows a small example of how to use a transaction.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Database</span> <span class="n">database</span> <span class="o">=</span> <span class="n">driver</span><span class="p">.</span><span class="na">getDatabase</span><span class="p">(</span><span class="s">&quot;Bank&quot;</span><span class="p">);</span>
 <span class="n">DatabaseCollection</span> <span class="n">balances</span> <span class="o">=</span> <span class="n">database</span><span class="p">.</span><span class="na">getCollection</span><span class="p">(</span><span class="s">&quot;balances&quot;</span><span class="p">);</span>
