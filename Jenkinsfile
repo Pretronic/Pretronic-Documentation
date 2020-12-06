@@ -63,7 +63,7 @@ pipeline {
 
                        files.each{ file ->
                           if(file.directory) {
-                            sh "mkdocs build"
+                            sh "cd ${file.name} && mkdocs build"
                           }
                        }
                      }
