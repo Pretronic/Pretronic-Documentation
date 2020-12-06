@@ -15,7 +15,8 @@ pipeline {
                     sh """
                     pip3 install --upgrade pip
                     pip3 install mkdocs-material
-
+                    pip install mkdocs-git-revision-date-plugin
+                    pip install mkdocs-git-committers-plugin-2
                     """
                 }
             }
@@ -48,7 +49,7 @@ pipeline {
 
                        files.each{ file ->
                           if(file.directory) {
-                            sh "cp ../template/Pretronic-Dokumentation-Template/* ${file.name}/ -r"
+                            sh "cp ../template/Pretronic-Dokumentation-Template/* ${file.name}/ -n"
                           }
                        }
                      }
