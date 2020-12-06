@@ -1,0 +1,69 @@
+site_name: Pretronic Database Query
+site_description: The Pretronic Database Query (PDQ) project is a java and kotlin database framework for querying and manipulating data from different databases. The project was originally designed to get a better and simpler way to access data from relational databases.
+site_url: http://docs.pretronic.net/pretronic-database-query/
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+  extra_css:
+    - stylesheets/bootstrap-grid.min.css
+    - stylesheets/style.css
+  icon:
+    repo: fontawesome/brands/github
+  logo: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  favicon: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  palette:
+    scheme: preference
+    primary: 'indigo'
+    accent: 'indigo'
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - admonition
+  - meta
+  - pymdownx.smartsymbols
+  - def_list
+  - pymdownx.tasklist:
+      clickable_checkbox: false
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
+  - stylesheets/bootstrap-grid.min.css
+  - stylesheets/style.css
+
+nav:
+  - Overview: index.md
+  - Guides:
+      - Project setup:
+          - Include in project: guides/project-setup/include-in-project.md
+          - Driver Configuration: guides/project-setup/driver-config-setup.md
+          - Driver Setup: guides/project-setup/ddriver-setup.md
+          - Database: guides/project-setup/database.md
+          - Database Collection: guides/project-setup/database-colelction.md
+      - Database Queries:
+          - Overview: guides/queries/index.md
+          - Insert Query: guides/queries/insert.md
+          - Select Query: guides/queries/select.md
+          - Update Query: guides/queries/update.md
+          - Delete Query: guides/queries/delete.md
+          - Transactions: guides/queries/transactions.md
+          - Aggregations: guides/queries/aggregations.md
+  - Javadocs: https://javadocs.pretronic.net/pretronic-databasequery/
+  - Changelog:
+      Home: changelog/index.md
+
+repo_url: https://github.com/Pretronic/PretronicDatabaseQuery
+repo_name: PretronicDatabaseQuery
+edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/
