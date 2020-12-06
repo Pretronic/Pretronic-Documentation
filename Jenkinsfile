@@ -41,14 +41,17 @@ pipeline {
         stage('Merge template in projects') {
             steps {
                 script {
-                    sshagent([PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID]) {
-                        sh """
-                        for d in projects/ ; do
-                            echo "$d"
-                            mv /template/* $d
-                        done
-                        """
-                    }
+
+                    dir('projects') {
+                       def files = findFiles()
+
+                       files.each{ f ->
+                          if(f.directory) {
+                            echo "This is directory: ${f.name} "
+                            sh "mv /template/* $d"
+                          }
+                       }
+                     }
                 }
             }
         }
