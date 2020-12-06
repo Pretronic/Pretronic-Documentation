@@ -48,7 +48,7 @@ pipeline {
                        files.each{ file ->
                           if(file.directory) {
                             echo "This is directory: ${file.name} "
-                            sh "mv /template/* ${file.name}"
+                            sh "mv /template/* projects/${file.name}"
                           }
                        }
                      }
