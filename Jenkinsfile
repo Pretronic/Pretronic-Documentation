@@ -51,7 +51,7 @@ pipeline {
                             fileOperations([fileCopyOperation(
                               excludes: '',
                               flattenFiles: false,
-                              includes: 'template/Pretronic-Dokumentation-Template/*',
+                              includes: 'template\\Pretronic-Dokumentation-Template\\**',
                               targetLocation: "projects/${file.name}"
                             )])
                           }
