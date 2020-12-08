@@ -63,7 +63,7 @@ nav:
           - Aggregations: guides/queries/aggregations.md
   - Javadocs: https://javadocs.pretronic.net/pretronic-databasequery/
   - Changelog:
-      Home: changelog/index.md
+      Versions: changelog/index.md
 
 repo_url: https://github.com/Pretronic/PretronicDatabaseQuery
 repo_name: PretronicDatabaseQuery

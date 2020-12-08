@@ -16,7 +16,7 @@
 - Added support for rendering admonitions as inline blocks
 
 
-<script>
+<script one>
 document.getElementsByClassName("md-nav--primary")[0].hidden = true;
 </script>
 
