@@ -31,10 +31,10 @@ pipeline {
                 script {
                     sshagent([PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID]) {
                         sh """
-                        if [ -d "template" ]; then rm -Rf template; fi
+                        if [ -d "template" ]; then rm -R -f template; fi
                         mkdir template
 
-                        if [ -d "build" ]; then rm -Rf build; fi
+                        if [ -d "build" ]; then rm -R -Cf build; fi
                         mkdir build
 
 
