@@ -37,8 +37,9 @@ pipeline {
                         rm -R build
                         mkdir build
 
-
                         cd template/
+                        ls .
+
                         git clone --single-branch --branch master ${GIT_TEMPLATE_SSH}
                         """
                     }
