@@ -173,8 +173,8 @@ footer h4 {
 
 .page-container {
     margin-top: 100px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .page-container h1{
@@ -214,5 +214,37 @@ footer h4 {
 }
 
 
+.md-typeset p {
+    font-weight: 300;
+}
+
+.md-typeset h1 {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.md-typeset h2 {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.md-typeset h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.md-typeset h4 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 76.25em){
+    .md-nav__toggle~.md-nav {
+        display: block;
+    }
+    .md-nav__icon {
+        transform: rotate(90deg) !important;
+    }
+}
 
 
