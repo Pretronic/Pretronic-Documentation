@@ -31,15 +31,14 @@ pipeline {
                 script {
                     sshagent([PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID]) {
                         sh """
-                        rm -R template
+                        if [ -d "template" ]; then rm -Rf template; fi
                         mkdir template
 
-                        rm -R build
+                        if [ -d "build" ]; then rm -Rf build; fi
                         mkdir build
 
-                        cd template/
-                        ls .
 
+                        cd template/
                         git clone --single-branch --branch master ${GIT_TEMPLATE_SSH}
                         """
                     }
