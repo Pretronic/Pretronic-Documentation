@@ -50,9 +50,9 @@ nav:
       - Project setup:
           - Include in project: guides/project-setup/include-in-project.md
           - Driver Configuration: guides/project-setup/driver-config-setup.md
-          - Driver Setup: guides/project-setup/ddriver-setup.md
+          - Driver Setup: guides/project-setup/driver-setup.md
           - Database: guides/project-setup/database.md
-          - Database Collection: guides/project-setup/database-colelction.md
+          - Database Collection: guides/project-setup/database-collection.md
       - Database Queries:
           - Overview: guides/queries/index.md
           - Insert Query: guides/queries/insert.md
