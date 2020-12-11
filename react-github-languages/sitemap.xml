@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+     <loc>http://docs.pretronic.net/react-github-language/</loc>
+     <lastmod>2020-12-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://docs.pretronic.net/react-github-language/guides/installation/</loc>
+     <lastmod>2020-12-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://docs.pretronic.net/react-github-language/guides/language-provider/</loc>
+     <lastmod>2020-12-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://docs.pretronic.net/react-github-language/guides/messages/</loc>
+     <lastmod>2020-12-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://docs.pretronic.net/react-github-language/guides/language-list/</loc>
+     <lastmod>2020-12-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://docs.pretronic.net/react-github-language/changelog/</loc>
+     <lastmod>2020-12-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>
