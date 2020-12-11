@@ -93,7 +93,7 @@ pipeline {
                         cd build/
                         git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
                         cd ${PROJECT_NAME}/
-                        rm -R ./*
+                        if [ -d "./*" ]; then rm -R ./*; fi
                         echo ${CNAME} > CNAME
                         """
                         dir('projects') {
