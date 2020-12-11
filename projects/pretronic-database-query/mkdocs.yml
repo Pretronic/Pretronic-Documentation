@@ -59,7 +59,7 @@ nav:
           - Select Query: guides/queries/select.md
           - Update Query: guides/queries/update.md
           - Delete Query: guides/queries/delete.md
-          - Transactions: guides/queries/transactions.md
+          - Transactions: guides/queries/installation.md
           - Aggregations: guides/queries/aggregations.md
   - Javadocs: https://javadocs.pretronic.net/pretronic-databasequery/
   - Changelog:

@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+<style>
+    .md-header {
+        position: initial !important;
+    }
+    .md-main__inner {
+        margin: 0 !important;
+    }
+</style>
+
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="page-container">
+
+            <div class="row">
+                <div class="col-12 col-lg-6" style="margin-bottom: 40px;">
+                    <h1>{{config.site_name}}</h1>
+                    <p >{{config.site_description}}</p>
+                    <a href="{{ page.next_page.url | url }}"
+                       class="md-button md-button--primary"
+                    >
+                        Get started
+                    </a>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <img src="{{config.site_url}}images/overview.png" alt="Overview Image"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}

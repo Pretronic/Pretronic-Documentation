@@ -1,0 +1,60 @@
+site_name: Pretronic Database Query
+site_description: The React GitHub language project is a simple and easy-to-use library for translating your React projects into different languages. The library directly consumes the language files from a GitHub repository.
+site_url: http://docs.pretronic.net/react-github-language/
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+  extra_css:
+    - stylesheets/bootstrap-grid.min.css
+    - stylesheets/style.css
+  icon:
+    repo: fontawesome/brands/github
+  logo: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  favicon: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  palette:
+    scheme: preference
+    primary: 'indigo'
+    accent: 'indigo'
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - admonition
+  - meta
+  - pymdownx.smartsymbols
+  - def_list
+  - pymdownx.tasklist:
+      clickable_checkbox: false
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+  - git-revision-date
+
+extra_css:
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
+  - stylesheets/bootstrap-grid.min.css
+  - stylesheets/style.css
+
+nav:
+  - Overview: index.md
+  - Guides:
+    - Installation: guides/installation.md
+    - Repository setup: guides/repository-list.md
+    - Language provider: guides/language-provider.md
+    - Messages: guides/messages.md
+    - Language list: guides/language-list.md
+  - Changelog:
+      Versions: changelog/index.md
+
+repo_url: https://github.com/Pretronic/react-github-languages
+repo_name: react-github-languages
+edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/react-github-languages/docs
