@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="http://docs.pretronic.net/pretronic-database-query/guides/project-setup/driver-config-setup/">
+        <link rel="canonical" href="http://docs.pretronic.net/pretronic-database-query/guides/project-setup/database-collection/">
       
       
       <link rel="shortcut icon" href="https://content.pretronic.net/brand/logo/pretronic-gray.png">
@@ -18,7 +18,7 @@
     
     
       
-        <title>Driver config setup - Pretronic Database Query</title>
+        <title>Database collection - Pretronic Database Query</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#driver-config" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
           </span>
                 <span class="md-header-nav__topic md-ellipsis">
             
-              Driver config setup
+              Database collection
             
           </span>
             </div>
@@ -393,76 +393,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Driver Configuration
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../driver-config-setup/" class="md-nav__link">
       Driver Configuration
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pre-requirements" class="md-nav__link">
-    Pre-Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-driver-config" class="md-nav__link">
-    Create a driver config
-  </a>
-  
-    <nav class="md-nav" aria-label="Create a driver config">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#loading-from-a-document" class="md-nav__link">
-    Loading from a document
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-directly-from-code" class="md-nav__link">
-    Create directly from code
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -494,11 +429,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../database-collection/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Database Collection
     </a>
+    
   </li>
 
         
@@ -687,48 +631,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pre-requirements" class="md-nav__link">
-    Pre-Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-a-driver-config" class="md-nav__link">
-    Create a driver config
-  </a>
-  
-    <nav class="md-nav" aria-label="Create a driver config">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#loading-from-a-document" class="md-nav__link">
-    Loading from a document
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-directly-from-code" class="md-nav__link">
-    Create directly from code
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -739,66 +641,15 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/docs/guides/project-setup/driver-config-setup.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/docs/guides/project-setup/database-collection.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="driver-config">Driver config<a class="headerlink" href="#driver-config" title="Permanent link">&para;</a></h1>
-<p>The driver config is the base of database driver. It contains the required options to connect the driver to your database.
-The driver config is divided into remote database driver config for connecting to remote databases and local database
-driver configs for connecting to local databases like file databases. </p>
-<h2 id="pre-requirements">Pre-Requirements<a class="headerlink" href="#pre-requirements" title="Permanent link">&para;</a></h2>
-<p>You need a slf4j logger in your runtime. Either you declare a logger on your self, or you can use a PretronicLogger 
-and set it as a slf4j logger instance.</p>
-<p>Setup a PretronicLogger as slf4j logger instance:
-<div class="highlight"><pre><span></span><code><span class="n">PretronicLogger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">PretronicLoggerFactory</span><span class="p">.</span><span class="na">getLogger</span><span class="p">();</span>
-<span class="n">SLF4JStaticBridge</span><span class="p">.</span><span class="na">setLogger</span><span class="p">(</span><span class="n">logger</span><span class="p">);</span>
-</code></pre></div></p>
-<h2 id="create-a-driver-config">Create a driver config<a class="headerlink" href="#create-a-driver-config" title="Permanent link">&para;</a></h2>
-<p>There are two options to create a driver config. One option is to load it from a document or from a file and the other 
-option is to create a driver config directly from the code. In these examples, we use for the local database config example
-h2 portable and for remote MySQL.</p>
-<h3 id="loading-from-a-document">Loading from a document<a class="headerlink" href="#loading-from-a-document" title="Permanent link">&para;</a></h3>
-<h4>Config examples</h4>
-<p>For a local database:
-<div class="highlight"><pre><span></span><code><span class="nt">location</span><span class="p">:</span> <span class="s">&#39;databases/&#39;</span>
-<span class="nt">driver</span><span class="p">:</span> <span class="s">&#39;net.pretronic.databasequery.sql.driver.SQLDatabaseDriver&#39;</span>
-<span class="nt">name</span><span class="p">:</span> <span class="s">&#39;Default&#39;</span>
-<span class="nt">dialectName</span><span class="p">:</span> <span class="s">&#39;H2Portable&#39;</span>
-<span class="nt">useSSL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-</code></pre></div></p>
-<p>For a remote database:
-<div class="highlight"><pre><span></span><code><span class="nt">address</span><span class="p">:</span> <span class="s">&#39;127.0.0.1&#39;</span>
-<span class="nt">username</span><span class="p">:</span> <span class="s">&#39;root&#39;</span>
-<span class="nt">password</span><span class="p">:</span> <span class="s">&#39;******&#39;</span>
-<span class="nt">driver</span><span class="p">:</span> <span class="s">&#39;net.pretronic.databasequery.sql.driver.SQLDatabaseDriver&#39;</span>
-<span class="nt">name</span><span class="p">:</span> <span class="s">&#39;MySQL&#39;</span>
-<span class="nt">dialectName</span><span class="p">:</span> <span class="s">&#39;MySQL&#39;</span>
-<span class="nt">useSSL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-</code></pre></div></p>
-<p>Load a driver config from a file:
-<div class="highlight"><pre><span></span><code><span class="n">DatabaseDriverConfig</span><span class="o">&lt;?&gt;</span> <span class="n">config</span> <span class="o">=</span> <span class="n">DatabaseDriverFactory</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">DocumentFileType</span><span class="p">.</span><span class="na">YAML</span><span class="p">.</span><span class="na">getReader</span><span class="p">().</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="s">&quot;driver-config.yml&quot;</span><span class="p">)));</span>
-</code></pre></div></p>
-<h3 id="create-directly-from-code">Create directly from code<a class="headerlink" href="#create-directly-from-code" title="Permanent link">&para;</a></h3>
-<p>Create a h2-portable driver config:
-<div class="highlight"><pre><span></span><code><span class="n">DatabaseDriverConfig</span><span class="o">&lt;?&gt;</span> <span class="n">config</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SQLDatabaseDriverConfigBuilder</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;H2-Portable&quot;</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">setLocation</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="s">&quot;databases/&quot;</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">setDialect</span><span class="p">(</span><span class="n">Dialect</span><span class="p">.</span><span class="na">H2_PORTABLE</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">setUseSSL</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">build</span><span class="p">();</span>
-</code></pre></div></p>
-<p>Create a mysql driver config:
-<div class="highlight"><pre><span></span><code><span class="n">DatabaseDriverConfig</span><span class="o">&lt;?&gt;</span> <span class="n">config</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SQLDatabaseDriverConfigBuilder</span><span class="p">()</span>
-                <span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;MySQL&quot;</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">setAddress</span><span class="p">(</span><span class="k">new</span> <span class="n">InetSocketAddress</span><span class="p">(</span><span class="s">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="mi">3306</span><span class="p">))</span>
-                <span class="p">.</span><span class="na">setDialect</span><span class="p">(</span><span class="n">Dialect</span><span class="p">.</span><span class="na">MYSQL</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&quot;root&quot;</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="s">&quot;&#39;******&#39;&quot;</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">setUseSSL</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-                <span class="p">.</span><span class="na">build</span><span class="p">()</span>
-</code></pre></div></p>
+                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<h1 id="get-a-database-from-driver">Get a database from driver<a class="headerlink" href="#get-a-database-from-driver" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
                 
                   
                     
@@ -807,7 +658,7 @@ h2 portable and for remote MySQL.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-06
+      Last update: 2020-12-11
     
   </small>
 </div>

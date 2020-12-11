@@ -414,16 +414,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#maven" class="md-nav__link">
-    Maven
+  <a href="#repository" class="md-nav__link">
+    Repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gradle" class="md-nav__link">
-    Gradle
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
   </a>
+  
+    <nav class="md-nav" aria-label="Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#only-api" class="md-nav__link">
+    Only api
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-sql" class="md-nav__link">
+    For sql
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -452,7 +472,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ddriver-setup.md" class="md-nav__link">
+    <a href="../driver-setup/" class="md-nav__link">
       Driver Setup
     </a>
   </li>
@@ -476,7 +496,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../database-colelction.md" class="md-nav__link">
+    <a href="../database-collection/" class="md-nav__link">
       Database Collection
     </a>
   </li>
@@ -674,16 +694,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#maven" class="md-nav__link">
-    Maven
+  <a href="#repository" class="md-nav__link">
+    Repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gradle" class="md-nav__link">
-    Gradle
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
   </a>
+  
+    <nav class="md-nav" aria-label="Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#only-api" class="md-nav__link">
+    Only api
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-sql" class="md-nav__link">
+    For sql
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -707,47 +747,66 @@
                 <h1 id="include-in-your-project">Include in your project<a class="headerlink" href="#include-in-your-project" title="Permanent link">&para;</a></h1>
 <p>There are several options to include pretronic database query into your project. In this example below, we show it with
 maven and gradle.</p>
-<p>Important:
-You have to include your jdbc drivers, for example mysql or h2 portable.</p>
-<h2 id="maven">Maven<a class="headerlink" href="#maven" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You have to include your jdbc drivers, for example mysql or h2 portable.</p>
+</div>
+<h2 id="repository">Repository<a class="headerlink" href="#repository" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Maven</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;repository&gt;</span>
     <span class="nt">&lt;id&gt;</span>pretronic<span class="nt">&lt;/id&gt;</span>
     <span class="nt">&lt;url&gt;</span>https://repository.pretronic.net/repository/pretronic/<span class="nt">&lt;/url&gt;</span>
 <span class="nt">&lt;/repository&gt;</span>
 </code></pre></div>
-<p>Only for api:
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>net.pretronic.databasequery<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>pretronicdatabasequery-api<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>VERSION<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div></p>
-<p>For sql:
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>net.pretronic.databasequery<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>pretronicdatabasequery-api<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>VERSION<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div></p>
-<h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h2>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Gradle</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>repositories {
     maven {
         url &quot;https://repository.pretronic.net/repository/pretronic/&quot;
     }
 }
 </code></pre></div>
-<p>Only for api:
+</div>
+</div>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code>VERSION</code> with your desired version</p>
+</div>
+<h3 id="only-api">Only api<a class="headerlink" href="#only-api" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Maven</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>net.pretronic.databasequery<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>pretronicdatabasequery-api<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>VERSION<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Gradle</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>dependencies {
     compile &#39;net.pretronic.databasequery:pretronicdatabasequery-api:VERSION&#39;
 }
-</code></pre></div></p>
-<p>For sql:
+</code></pre></div>
+</div>
+</div>
+<h3 id="for-sql">For sql<a class="headerlink" href="#for-sql" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Maven</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>net.pretronic.databasequery<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>pretronicdatabasequery-sql<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>VERSION<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Gradle</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>dependencies {
     compile &#39;net.pretronic.databasequery:pretronicdatabasequery-sql:VERSION&#39;
 }
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
                 
                   
                     
@@ -756,7 +815,7 @@ You have to include your jdbc drivers, for example mysql or h2 portable.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-06
+      Last update: 2020-12-11
     
   </small>
 </div>

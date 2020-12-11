@@ -224,7 +224,9 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -232,9 +234,7 @@
   <li class="md-tabs__item">
     
     
-      
-    
-    <a href="../../.." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Overview
     </a>
   </li>
@@ -250,7 +250,9 @@
     <li class="md-tabs__item">
       
       
-      <a href="../include-in-project/" class="md-tabs__link">
+        
+      
+      <a href="../include-in-project/" class="md-tabs__link md-tabs__link--active">
         Guides
       </a>
     </li>
@@ -335,10 +337,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     <label class="md-nav__link" for="nav-2">
       Guides
       <span class="md-nav__icon md-icon"></span>
@@ -355,10 +359,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     <label class="md-nav__link" for="nav-2-1">
       Project setup
       <span class="md-nav__icon md-icon"></span>
@@ -399,11 +405,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ddriver-setup.md" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Driver Setup
     </a>
+    
   </li>
 
         
@@ -425,7 +440,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../database-colelction.md" class="md-nav__link">
+    <a href="../database-collection/" class="md-nav__link">
       Database Collection
     </a>
   </li>
