@@ -1,12 +1,16 @@
-String PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID = "1c1bd183-26c9-48aa-94ab-3fe4f0bb39ae"
+final String PRETRONIC_CI_SSH_KEY_CREDENTIAL_ID = "1c1bd183-26c9-48aa-94ab-3fe4f0bb39ae"
 
-String GIT_TEMPLATE_SSH = "git@github.com:Pretronic/Pretronic-Dokumentation-Template.git"
-String GIT_DOCS_SSH = "git@github.com:Pretronic/Pretronic-Documentation.git"
+final String GIT_TEMPLATE_SSH = "git@github.com:Pretronic/Pretronic-Dokumentation-Template.git"
+
+final String GIT_DOCS_SSH = "git@github.com:Pretronic/Pretronic-Documentation.git"
 
 final String CI_NAME = "PretronicCI"
 final String CI_EMAIL = "ci@pretronic.net"
 
 final String CNAME = "docs.pretronic.net"
+
+final String PROJECT_NAME = "Pretronic-Documentation"
+final String TEMPLATE_PROJECT_NAME = "Pretronic-Dokumentation-Template"
 
 pipeline {
     agent any
@@ -54,7 +58,7 @@ pipeline {
 
                        files.each{ file ->
                           if(file.directory) {
-                            sh "cp ../template/Pretronic-Dokumentation-Template/* ${file.name}/ -r -n"
+                            sh "cp ../template/${TEMPLATE_PROJECT_NAME}/* ${file.name}/ -r -n"
                           }
                        }
                      }
@@ -88,7 +92,7 @@ pipeline {
                         sh """
                         cd build/
                         git clone --single-branch --branch gh-pages ${GIT_DOCS_SSH}
-                        cd Pretronic-Documentation/
+                        cd ${PROJECT_NAME}/
                         rm -R ./*
                         echo ${CNAME} > CNAME
                         """
@@ -97,12 +101,12 @@ pipeline {
 
                            files.each{ file ->
                               if(file.directory) {
-                                sh "mkdir ../build/Pretronic-Documentation/${file.name} && cp ${file.name}/site/* ../build/Pretronic-Documentation/${file.name}/ -r"
+                                sh "mkdir ../build/${PROJECT_NAME}/${file.name} && cp ${file.name}/site/* ../build/${PROJECT_NAME}/${file.name}/ -r"
                               }
                            }
                          }
                         sh """
-                        cd build/Pretronic-Documentation/
+                        cd build/${PROJECT_NAME}/
                         cp home/* ./ -r
                         rm -R home/
                         git add . -v
