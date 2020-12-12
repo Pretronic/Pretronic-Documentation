@@ -247,4 +247,9 @@ footer h4 {
     }
 }
 
+.md-typeset table:not([class]) th {
+    color: var(--md-default-fg-color--lighter) !important;
+    font-weight: bold !important;
+}
+
 

@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#driver-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -415,9 +415,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Driver Setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Driver Setup
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-driver" class="md-nav__link">
+    Create a driver
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -631,6 +667,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-driver" class="md-nav__link">
+    Create a driver
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -646,10 +704,11 @@
                   </a>
                 
                 
-                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+                <h1 id="driver-setup">Driver setup<a class="headerlink" href="#driver-setup" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>The driver is the base of the database connection. From it, you can get databases. It is created with minimum of a
 driver config and a name.</p>
-<h1 id="create-a-driver">Create a driver<a class="headerlink" href="#create-a-driver" title="Permanent link">&para;</a></h1>
+<h2 id="create-a-driver">Create a driver<a class="headerlink" href="#create-a-driver" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">DatabaseDriver</span> <span class="n">driver</span> <span class="o">=</span> <span class="n">DatabaseDriverFactory</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;MyDriver&quot;</span><span class="p">,</span> <span class="n">driverConfig</span><span class="p">,</span> <span class="n">logger</span><span class="p">);</span>
 </code></pre></div>
                 
@@ -660,7 +719,7 @@ driver config and a name.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-06
+      Last update: 2020-12-12
     
   </small>
 </div>
