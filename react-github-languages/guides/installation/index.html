@@ -355,9 +355,51 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Installation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#language-provider-setup" class="md-nav__link">
+    Language provider setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Language provider setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -370,18 +412,6 @@
   <li class="md-nav__item">
     <a href="../repository-setup/" class="md-nav__link">
       Repository setup
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../language-provider/" class="md-nav__link">
-      Language provider
     </a>
   </li>
 
@@ -469,6 +499,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#language-provider-setup" class="md-nav__link">
+    Language provider setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Language provider setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -485,7 +543,8 @@
                 
                 
                 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<p>The installation is very easy and can be done with the npm or yarn packet manager.</p>
+<p>The installation is very easy and can be done with the npm or yarn packet manager.
+You can find the package on <a href="https://www.npmjs.com/package/@pretronic/react-github-languages">npmjs</a>.</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">npm</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>npm install @pretronic/react-github-languages
 </code></pre></div>
@@ -495,6 +554,54 @@
 </code></pre></div>
 </div>
 </div>
+<h2 id="language-provider-setup">Language provider setup<a class="headerlink" href="#language-provider-setup" title="Permanent link">&para;</a></h2>
+<p>After the installation you should warp your app code with the <code>LanguageProvider</code>, this wrapper component is responsible for the language management and passes the translations to the <code>Message</code> components.</p>
+<p>The <code>repository</code> property must contain the name of your GitHub repository, see the <a href="repository-setup">repository-setup</a> guide 
+to get more information about the structure. </p>
+<p>Finally, pass the selected language (code) of your user to the language provider with the <code>language</code> property.</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">LanguageProvider</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@pretronic/react-github-languages&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">App</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="o">&lt;</span><span class="p">{},</span> <span class="p">{}</span><span class="o">&gt;</span> <span class="p">{</span>
+
+
+  <span class="nx">render() {</span>
+    <span class="k">return</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">LanguageProvider</span> <span class="nx">repository</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Pretronic/PretronicAccountTranslations&quot;</span><span class="p">}</span> <span class="nx">branch</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;main&quot;</span><span class="p">}</span> <span class="nx">language</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;en&quot;</span><span class="p">}</span> <span class="o">&gt;</span>
+
+      <span class="cm">/* Your app code comes here */</span>
+
+    <span class="o">&lt;</span><span class="err">/LanguageProvider&gt;)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Read more about how to use a message <a href="messages">message</a>.</p>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repository</code></td>
+<td>The name of your GitHub repository</td>
+</tr>
+<tr>
+<td><code>branch</code></td>
+<td>The name of the branch (usually main)</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>The selected language</td>
+</tr>
+<tr>
+<td><code>fallbackLanguage</code></td>
+<td>The fallback language if the message is not available in the selected language</td>
+</tr>
+</tbody>
+</table>
                 
                   
                     

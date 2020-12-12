@@ -371,18 +371,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../language-provider/" class="md-nav__link">
-      Language provider
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../messages/" class="md-nav__link">
       Messages
     </a>
@@ -485,6 +473,17 @@
                 
                 
                 <h1 id="language-list">Language List<a class="headerlink" href="#language-list" title="Permanent link">&para;</a></h1>
+<p>Now, if you want to give your users the possibility to choose their preferred language, you can use the 
+object <code>LanguageList</code> to list all available languages.</p>
+<p>The <code>LanguageList</code> contains all languages from the languages.json file.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">LanguageList</span> <span class="nx">render</span><span class="o">=</span><span class="p">{</span><span class="nx">languages</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">languages</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">language</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">language</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/li&gt;)</span>
+        <span class="p">})}</span>
+    <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+<span class="p">}}</span> <span class="o">/&gt;</span>
+</code></pre></div>
                 
                   
                     
@@ -493,7 +492,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-11
+      Last update: 2020-12-12
     
   </small>
 </div>

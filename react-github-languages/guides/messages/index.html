@@ -369,18 +369,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../language-provider/" class="md-nav__link">
-      Language provider
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -391,9 +379,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Messages
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Messages
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -469,6 +493,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -485,6 +531,59 @@
                 
                 
                 <h1 id="messages">Messages<a class="headerlink" href="#messages" title="Permanent link">&para;</a></h1>
+<p>The <code>Message</code> object is used to replace a conventional message with a configured translatable message.</p>
+<p>The <code>name</code> property must contain the name of your message key configured in the translation file. Optionally, you 
+can pass variables to your message, which will be replaced and converted to a string.</p>
+<div class="highlight"><pre><span></span><code>&lt;Message name={&quot;settings.name&quot;} variables={{name: &quot;Jack&quot;}} /&gt;
+</code></pre></div>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>This example shows how you can replace your current messages with translatable messages.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Before</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="p">{</span><span class="nx">name</span><span class="p">},</span> <span class="nx">how</span> <span class="nx">are</span> <span class="nx">you</span><span class="o">?&lt;</span><span class="err">/p&gt;</span>
+<span class="o">&lt;</span><span class="err">/div&gt;</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">After</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">Message</span> <span class="nx">name</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;question&quot;</span><span class="p">}</span> <span class="nx">variables</span><span class="o">=</span><span class="p">{{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Jack&quot;</span><span class="p">}}</span> <span class="o">/&gt;</span> <span class="o">&lt;</span><span class="err">/p&gt;</span>
+<span class="o">&lt;</span><span class="err">/div&gt;</span>
+</code></pre></div>
+</div>
+</div>
+<p>The configured translation file will look similar to this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;localName&quot;</span><span class="p">:</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello {name}, how are you?&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>The name is the key of the message</td>
+</tr>
+<tr>
+<td><code>variables</code></td>
+<td>Variables to be replaced in the message</td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td>A default message if the message could not be found</td>
+</tr>
+</tbody>
+</table>
                 
                   
                     
