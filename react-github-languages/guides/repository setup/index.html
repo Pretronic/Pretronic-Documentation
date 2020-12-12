@@ -18,7 +18,7 @@
     
     
       
-        <title>Repository setup - Pretronic Database Query</title>
+        <title>Repository setup - React GitHub Languages</title>
       
     
     
@@ -95,9 +95,9 @@
         <!-- Link to home -->
         <a
                 href=""
-                title="Pretronic Database Query"
+                title="React GitHub Languages"
                 class="md-header-nav__button md-logo"
-                aria-label="Pretronic Database Query"
+                aria-label="React GitHub Languages"
         >
             
   <img src="https://content.pretronic.net/brand/logo/pretronic-gray.png" alt="logo">
@@ -114,7 +114,7 @@
             
             <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            Pretronic Database Query
+            React GitHub Languages
           </span>
                 <span class="md-header-nav__topic md-ellipsis">
             
@@ -282,12 +282,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://docs.pretronic.net/react-github-language/" title="Pretronic Database Query" class="md-nav__button md-logo" aria-label="Pretronic Database Query">
+    <a href="http://docs.pretronic.net/react-github-language/" title="React GitHub Languages" class="md-nav__button md-logo" aria-label="React GitHub Languages">
       
   <img src="https://content.pretronic.net/brand/logo/pretronic-gray.png" alt="logo">
 
     </a>
-    Pretronic Database Query
+    React GitHub Languages
   </label>
   
     <div class="md-nav__source">
@@ -355,7 +355,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../repository-list.md" class="md-nav__link">
+    <a href="../repository-setup.md" class="md-nav__link">
       Repository setup
     </a>
   </li>
@@ -456,6 +456,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#language-configuration" class="md-nav__link">
+    Language configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-language-file" class="md-nav__link">
+    Create a new language file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-repository" class="md-nav__link">
+    Final repository
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -472,6 +501,47 @@
                 
                 
                 <h1 id="repository-setup">Repository setup<a class="headerlink" href="#repository-setup" title="Permanent link">&para;</a></h1>
+<p>As the name of the project says, the library consumes language files 
+directly from a GitHub repository, you need to create a new repository for this.</p>
+<p>If you don't know how to create a repository, use
+<a href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo">this guide</a> from GitHub.</p>
+<h2 id="language-configuration">Language configuration<a class="headerlink" href="#language-configuration" title="Permanent link">&para;</a></h2>
+<p>Now let's start configuring your repository. For the first step, you need to define all your languages in the language.json.
+Create a new entry for each language and push the finished file (languages.json) to your repository.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;languages&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;localName&quot;</span><span class="p">:</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;German&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;localName&quot;</span><span class="p">:</span> <span class="s2">&quot;Deutsch&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;de&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>You can use the command line or add the file directly to the repository, see <a href="https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/adding-a-file-to-a-repository">this guide</a>
+if you don't know how to upload a file to a GitHub repository.</p>
+<h2 id="create-a-new-language-file">Create a new language file<a class="headerlink" href="#create-a-new-language-file" title="Permanent link">&para;</a></h2>
+<p>After configuring the languages, create a new translation file (code.json / en.json) for each language and push it back to your repository.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;localName&quot;</span><span class="p">:</span> <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;code&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;settings.title&quot;</span><span class="p">:</span> <span class="s2">&quot;Settings&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;settings.name&quot;</span><span class="p">:</span> <span class="s2">&quot;Your name is {name}&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="final-repository">Final repository<a class="headerlink" href="#final-repository" title="Permanent link">&para;</a></h2>
+<p>Your repository should now look something like the picture, you can also find an example repository <a href="https://github.com/Pretronic/PretronicAccountTranslations">here</a></p>
+<div class="admonition warning"></div>
+<p>Make sure that your repository is public.</p>
+<p><img alt="Example repository" src="{{config.site_url}}images/example-repo.png" /></p>
                 
                   
                     
@@ -480,7 +550,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-11
+      Last update: 2020-12-12
     
   </small>
 </div>
