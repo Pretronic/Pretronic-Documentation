@@ -2,6 +2,8 @@
 title: Insert Query
 ---
 
+# Insert Query
+
 The insert query is used to add new rows into your database, there are different possibilities to that.
 
 
