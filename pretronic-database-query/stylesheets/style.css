@@ -213,6 +213,26 @@ footer h4 {
     margin-right: 30px;
 }
 
+.page-container .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-container .feature-content h5{
+    font-size: 18px;
+}
+
+.page-container .feature-content .img-container{
+    width: 120px;
+    height: 120px;
+    background-color: #f1f3f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
 
 .md-typeset p {
     font-weight: 300;
