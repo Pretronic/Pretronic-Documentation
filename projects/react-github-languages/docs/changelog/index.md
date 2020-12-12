@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.4 <small>- December 11, 2020</small>
+## 1.0.6 <small>- December 11, 2020</small>
 
 - First public release version
 - Messages and variables
