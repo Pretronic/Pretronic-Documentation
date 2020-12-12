@@ -4,8 +4,6 @@ title: Driver setup
 
 # Driver setup
 
-## Introduction
-
 The driver is the base of the database connection. From it, you can get databases. It is created with minimum of a
 driver config and a name.
 

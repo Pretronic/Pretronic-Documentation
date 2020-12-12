@@ -10,7 +10,7 @@ The insert query is used to add new rows into your database, there are different
 
 ```java
 
-int id = employees.insert()
+employees.insert()
         .set("Name", "McCain")
         .set("FirstName", "Jack")
         .set("ManagerId", 34)
@@ -26,7 +26,7 @@ int id = employees.insert()
         .set("FirstName", "Jack")
         .set("ManagerId", 34)
         .set("Active", true)
-        .executeAndGetGeneratedKeyAsLong("Id");
+        .executeAndGetGeneratedKeyAsInt("Id");
 
 ```
 
@@ -35,9 +35,9 @@ int id = employees.insert()
 ```java
 
 employees.insert()
-        .set("Name", "McCain","Bill")
-        .set("FirstName", "Jack","Shepard")
-        .set("ManagerId", 34,48)
-        .set("Active", true,true)
+        .set("Name", "McCain", "Bill")
+        .set("FirstName", "Jack", "Shepard")
+        .set("ManagerId", 34, 48)
+        .set("Active", true, true)
         .execute();
 ```

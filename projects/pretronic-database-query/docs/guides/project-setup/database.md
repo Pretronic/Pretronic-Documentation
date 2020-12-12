@@ -4,8 +4,6 @@ title: Database
 
 # Database
 
-## Introduction
-
 The database can be got from you database driver. It includes the associated database collections. 
 
 ## Get a database

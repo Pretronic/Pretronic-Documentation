@@ -4,8 +4,6 @@ title: Database collection
 
 # Database collection
 
-## Introduction
-
 The database collection holds an undefined amount of entries. It is been created with a predefined schema. From the database
 object, the database collection can be got. 
 
