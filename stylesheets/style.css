@@ -209,6 +209,7 @@ footer h4 {
 .page-container h4{
     margin-top: 60px;
     font-weight: bold;
+    font-size: 24px;
 }
 
 .page-container .product-info {
@@ -260,6 +261,12 @@ footer h4 {
     margin-right: 30px;
 }
 
+
+.page-container .feature-content i {
+    font-size: 60px;
+    color: black;
+}
+
 @media screen and (min-width: 76.25em){
     .md-nav__toggle~.md-nav {
         display: block;
@@ -274,4 +281,12 @@ footer h4 {
     font-weight: bold !important;
 }
 
+
+.navbar-blocker {
+    position: absolute;
+    height: 50px;
+    background-color: var(--background-color);
+    width: 100%;
+    z-index: 1;
+}
 
