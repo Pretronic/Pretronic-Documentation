@@ -1,6 +1,6 @@
 site_name: React GitHub Languages
 site_description: The React GitHub language project is a simple and easy-to-use library for translating your React projects into different languages. The library directly consumes the language files from a GitHub repository.
-site_url: http://docs.pretronic.net/react-github-language/
+site_url: http://docs.pretronic.net/react-github-languages/
 
 theme:
   name: material

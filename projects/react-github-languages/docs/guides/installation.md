@@ -22,7 +22,7 @@ You can find the package on [npmjs](https://www.npmjs.com/package/@pretronic/rea
 
 ## Language provider setup
 
-After the installation you should warp your app code with the `LanguageProvider`, this wrapper component is responsible for the language management and passes the translations to the `Message` components.
+After the installation you should wrap your app code with the `LanguageProvider`, this wrapper component is responsible for the language management and passes the translations to the `Message` components.
 
 The `repository` property must contain the name of your GitHub repository, see the [repository-setup](repository-setup) guide 
 to get more information about the structure. 

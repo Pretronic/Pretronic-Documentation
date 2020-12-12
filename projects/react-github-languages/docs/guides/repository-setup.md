@@ -55,7 +55,7 @@ After configuring the languages, create a new translation file (code.json / en.j
 Your repository should now look something like the picture, you can also find an example repository [here](https://github.com/Pretronic/PretronicAccountTranslations)
 
 !!! warning ""
-Make sure that your repository is public.
+    Make sure that your repository is public.
 
 
-![Example repository]( {{config.site_url}} images/example-repo.png)
+![Example repository](https://docs.pretronic.net/react-github-languages/images/example-repo.png)
