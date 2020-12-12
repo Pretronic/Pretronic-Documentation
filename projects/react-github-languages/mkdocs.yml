@@ -49,7 +49,6 @@ nav:
   - Guides:
     - Installation: guides/installation.md
     - Repository setup: guides/repository-setup.md
-    - Language provider: guides/language-provider.md
     - Messages: guides/messages.md
     - Language list: guides/language-list.md
   - Changelog:
