@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#database-collection" class="md-skip">
           Skip to content
         </a>
       
@@ -439,9 +439,86 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Database Collection
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Database Collection
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-database-collection-in-a-database" class="md-nav__link">
+    Create a database collection in a database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    Queries
+  </a>
+  
+    <nav class="md-nav" aria-label="Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert-query" class="md-nav__link">
+    Insert query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-query" class="md-nav__link">
+    Find query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-query" class="md-nav__link">
+    Update query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-query" class="md-nav__link">
+    Delete query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -631,6 +708,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-database-collection-in-a-database" class="md-nav__link">
+    Create a database collection in a database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    Queries
+  </a>
+  
+    <nav class="md-nav" aria-label="Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert-query" class="md-nav__link">
+    Insert query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-query" class="md-nav__link">
+    Find query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-query" class="md-nav__link">
+    Update query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-query" class="md-nav__link">
+    Delete query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -646,10 +786,11 @@
                   </a>
                 
                 
-                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+                <h1 id="database-collection">Database collection<a class="headerlink" href="#database-collection" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>The database collection holds an undefined amount of entries. It is been created with a predefined schema. From the database
 object, the database collection can be got. </p>
-<h1 id="create-a-database-collection-in-a-database">Create a database collection in a database<a class="headerlink" href="#create-a-database-collection-in-a-database" title="Permanent link">&para;</a></h1>
+<h2 id="create-a-database-collection-in-a-database">Create a database collection in a database<a class="headerlink" href="#create-a-database-collection-in-a-database" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">DatabaseCollection</span> <span class="n">customers</span> <span class="o">=</span> <span class="n">database</span><span class="p">.</span><span class="na">createCollection</span><span class="p">(</span><span class="s">&quot;customers&quot;</span><span class="p">)</span>
                 <span class="p">.</span><span class="na">field</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span> <span class="n">DataType</span><span class="p">.</span><span class="na">INTEGER</span><span class="p">,</span> <span class="n">FieldOption</span><span class="p">.</span><span class="na">AUTO_INCREMENT</span><span class="p">,</span> <span class="n">FieldOption</span><span class="p">.</span><span class="na">PRIMARY_KEY</span><span class="p">)</span>
                 <span class="p">.</span><span class="na">field</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="n">DataType</span><span class="p">.</span><span class="na">STRING</span><span class="p">,</span> <span class="n">FieldOption</span><span class="p">.</span><span class="na">NOT_NULL</span><span class="p">,</span> <span class="n">FieldOption</span><span class="p">.</span><span class="na">INDEX</span><span class="p">)</span>
@@ -658,13 +799,13 @@ object, the database collection can be got. </p>
                 <span class="p">.</span><span class="na">field</span><span class="p">(</span><span class="s">&quot;phoneNumber&quot;</span><span class="p">,</span> <span class="n">DataType</span><span class="p">.</span><span class="na">STRING</span><span class="p">)</span>
                 <span class="p">.</span><span class="na">create</span><span class="p">();</span>  
 </code></pre></div>
-<h1 id="queries">Queries<a class="headerlink" href="#queries" title="Permanent link">&para;</a></h1>
+<h2 id="queries">Queries<a class="headerlink" href="#queries" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Below are some very simple example queries, for more information and more advanced queries, show in the
 <a href="{{site.site_url}}/guides/queries/">queries section</a>.</p>
 </div>
-<h2 id="insert-query">Insert query<a class="headerlink" href="#insert-query" title="Permanent link">&para;</a></h2>
+<h3 id="insert-query">Insert query<a class="headerlink" href="#insert-query" title="Permanent link">&para;</a></h3>
 <p>This query inserts a new collection entry with the name <code>Shephard</code> and the firstName <code>Bill</code>. The database collection
 fields <code>verified</code> and <code>phoneNumber</code> are null. The id will be generated automatically by your database.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">generatedId</span> <span class="o">=</span> <span class="n">customers</span><span class="p">.</span><span class="na">insert</span><span class="p">()</span>
@@ -672,7 +813,7 @@ fields <code>verified</code> and <code>phoneNumber</code> are null. The id will 
                 <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;firstName&quot;</span><span class="p">,</span> <span class="s">&quot;Bill&quot;</span><span class="p">)</span>
                 <span class="p">.</span><span class="na">executeAndGetGeneratedKeyAsInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="find-query">Find query<a class="headerlink" href="#find-query" title="Permanent link">&para;</a></h2>
+<h3 id="find-query">Find query<a class="headerlink" href="#find-query" title="Permanent link">&para;</a></h3>
 <p>This query searches for a collection entry, where the value of the field <code>name</code> equals <code>Shepard</code>. In the next step,
 the result size is printed and is being looped and all fields are printed. </p>
 <div class="admonition note">
@@ -691,7 +832,7 @@ changed on database side.</p>
     <span class="n">String</span> <span class="n">phoneNumber</span> <span class="o">=</span> <span class="n">entry</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;phoneNumber&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-<h2 id="update-query">Update query<a class="headerlink" href="#update-query" title="Permanent link">&para;</a></h2>
+<h3 id="update-query">Update query<a class="headerlink" href="#update-query" title="Permanent link">&para;</a></h3>
 <p>This query updates all entries fields <code>phoneNumber</code> to <code>+49 000000</code> and <code>verified</code> to <code>true</code>, where the <code>firstName</code>
 equals <code>Bill</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">customers</span><span class="p">.</span><span class="na">update</span><span class="p">()</span>
@@ -699,7 +840,7 @@ equals <code>Bill</code>.</p>
         <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;verified&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
         <span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;firstName&quot;</span><span class="p">,</span> <span class="s">&quot;Bill&quot;</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
 </code></pre></div>
-<h2 id="delete-query">Delete query<a class="headerlink" href="#delete-query" title="Permanent link">&para;</a></h2>
+<h3 id="delete-query">Delete query<a class="headerlink" href="#delete-query" title="Permanent link">&para;</a></h3>
 <p>This query deletes all entries, where the field <code>firstName</code> equals <code>Bill</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">collection</span><span class="p">.</span><span class="na">delete</span><span class="p">()</span>
         <span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;firstName&quot;</span><span class="p">,</span> <span class="s">&quot;Bill&quot;</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
