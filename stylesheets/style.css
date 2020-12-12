@@ -78,6 +78,30 @@
     transform: rotate(90deg);
 }
 
+.md-typeset p {
+    font-weight: 300;
+}
+
+.md-typeset h1 {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.md-typeset h2 {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.md-typeset h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.md-typeset h4 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
 footer {
     line-height: 24px;
     font-size: 14px;
@@ -234,30 +258,6 @@ footer h4 {
     justify-content: center;
     align-items: center;
     margin-right: 30px;
-}
-
-.md-typeset p {
-    font-weight: 300;
-}
-
-.md-typeset h1 {
-    font-weight: bold;
-    font-size: 26px;
-}
-
-.md-typeset h2 {
-    font-weight: 500;
-    font-size: 22px;
-}
-
-.md-typeset h3 {
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.md-typeset h4 {
-    font-weight: 500;
-    font-size: 14px;
 }
 
 @media screen and (min-width: 76.25em){
