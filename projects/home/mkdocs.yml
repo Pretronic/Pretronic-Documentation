@@ -1,6 +1,6 @@
-site_name: Pretronic Documentation
-site_description:
-site_url: http://docs.pretronic.net/
+site_name: Pretronic Docs Platform
+site_description: Build amazing things with Pretronic projects.
+site_url: http://127.0.0.1:8000/
 
 theme:
   name: material
@@ -12,8 +12,8 @@ theme:
     - stylesheets/style.css
   icon:
     repo: fontawesome/brands/github
-  logo: https://content.pretronic.net/brand/logo/pretronic-gray.png
-  favicon: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  logo: https://content.pretronic.net/brand/logo/pretronic-blue.png
+  favicon: https://content.pretronic.net/brand/logo/pretronic-blue.png
   palette:
     scheme: preference
     primary: 'indigo'
@@ -43,6 +43,9 @@ extra_css:
   - stylesheets/codehilite.css
   - stylesheets/bootstrap-grid.min.css
   - stylesheets/style.css
+  - stylesheets/docs-style.css
 
 
-edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/docs/
+edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/home/docs/
+disableRepo: true
+

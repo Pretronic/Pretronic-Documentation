@@ -1,0 +1,55 @@
+.github {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.github .view {
+    margin-top: 15px;
+    width: 220px;
+    height: 65px;
+    background-color: #2C2F33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.github .view a {
+    color: #DBE1E5;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-basis: 25%;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    cursor: pointer;
+    flex-basis: 25%
+}
+
+.project-item .title {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(233, 235, 252);
+}
