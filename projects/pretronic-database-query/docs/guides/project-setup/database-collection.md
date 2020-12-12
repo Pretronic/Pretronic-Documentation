@@ -2,12 +2,12 @@
 title: Database collection
 ---
 
-# Introduction
+# Database collection
 
 The database collection holds an undefined amount of entries. It is been created with a predefined schema. From the database
 object, the database collection can be got. 
 
-# Create a database collection in a database
+## Create a database collection in a database
 
 ````java
 DatabaseCollection customers = database.createCollection("customers")
@@ -19,13 +19,13 @@ DatabaseCollection customers = database.createCollection("customers")
                 .create();  
 ````
 
-# Queries
+## Queries
 
 !!! note
     Below are some very simple example queries, for more information and more advanced queries, show in the
     [queries section]({{site.site_url}}/guides/queries/).
 
-## Insert query
+### Insert query
 
 This query inserts a new collection entry with the name `Shephard` and the firstName `Bill`. The database collection
 fields `verified` and `phoneNumber` are null. The id will be generated automatically by your database.
@@ -37,7 +37,7 @@ int generatedId = customers.insert()
                 .executeAndGetGeneratedKeyAsInt("id");
 ````
 
-## Find query
+### Find query
 
 This query searches for a collection entry, where the value of the field `name` equals `Shepard`. In the next step,
 the result size is printed and is being looped and all fields are printed. 
@@ -59,7 +59,7 @@ result.forEach(entry -> {
 });
 ````
 
-## Update query
+### Update query
 
 This query updates all entries fields `phoneNumber` to `+49 000000` and `verified` to `true`, where the `firstName`
 equals `Bill`.
@@ -71,7 +71,7 @@ customers.update()
         .where("firstName", "Bill").execute();
 ````
 
-## Delete query
+### Delete query
 
 This query deletes all entries, where the field `firstName` equals `Bill`.
 

@@ -2,11 +2,11 @@
 title: Database
 ---
 
-# Introduction
+# Database
 
 The database can be got from you database driver. It includes the associated database collections. 
 
-# Get a database
+## Get a database
 
 ````java
 Database database = driver.getDatabase("Test");
