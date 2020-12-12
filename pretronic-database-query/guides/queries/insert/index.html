@@ -700,7 +700,7 @@
                 
                 <p>The insert query is used to add new rows into your database, there are different possibilities to that.</p>
 <h2 id="insert-a-single-value">Insert a single value<a class="headerlink" href="#insert-a-single-value" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="na">insert</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">employees</span><span class="p">.</span><span class="na">insert</span><span class="p">()</span>
         <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="s">&quot;McCain&quot;</span><span class="p">)</span>
         <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;FirstName&quot;</span><span class="p">,</span> <span class="s">&quot;Jack&quot;</span><span class="p">)</span>
         <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;ManagerId&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">)</span>
@@ -712,14 +712,14 @@
         <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;FirstName&quot;</span><span class="p">,</span> <span class="s">&quot;Jack&quot;</span><span class="p">)</span>
         <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;ManagerId&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">)</span>
         <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;Active&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
-        <span class="p">.</span><span class="na">executeAndGetGeneratedKeyAsLong</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span>
+        <span class="p">.</span><span class="na">executeAndGetGeneratedKeyAsInt</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="insert-multiple-values">Insert multiple values<a class="headerlink" href="#insert-multiple-values" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">employees</span><span class="p">.</span><span class="na">insert</span><span class="p">()</span>
-        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="s">&quot;McCain&quot;</span><span class="p">,</span><span class="s">&quot;Bill&quot;</span><span class="p">)</span>
-        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;FirstName&quot;</span><span class="p">,</span> <span class="s">&quot;Jack&quot;</span><span class="p">,</span><span class="s">&quot;Shepard&quot;</span><span class="p">)</span>
-        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;ManagerId&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span><span class="mi">48</span><span class="p">)</span>
-        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;Active&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span><span class="kc">true</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="s">&quot;McCain&quot;</span><span class="p">,</span> <span class="s">&quot;Bill&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;FirstName&quot;</span><span class="p">,</span> <span class="s">&quot;Jack&quot;</span><span class="p">,</span> <span class="s">&quot;Shepard&quot;</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;ManagerId&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">48</span><span class="p">)</span>
+        <span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="s">&quot;Active&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
         <span class="p">.</span><span class="na">execute</span><span class="p">();</span>
 </code></pre></div>
                 
@@ -730,7 +730,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-06
+      Last update: 2020-12-12
     
   </small>
 </div>
