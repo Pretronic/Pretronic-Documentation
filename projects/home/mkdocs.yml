@@ -1,6 +1,6 @@
 site_name: Pretronic Docs Platform
 site_description: Build amazing things with Pretronic projects.
-site_url: http://127.0.0.1:8000/
+site_url: https://docs.pretronic.net/
 
 theme:
   name: material
