@@ -41,9 +41,9 @@ plugins:
 extra_css:
   - stylesheets/dark_theme.css
   - stylesheets/codehilite.css
+  - stylesheets/docs-style.css
   - stylesheets/bootstrap-grid.min.css
   - stylesheets/style.css
-  - stylesheets/docs-style.css
 
 
 edit_uri: https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/home/docs/
