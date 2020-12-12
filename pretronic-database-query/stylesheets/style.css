@@ -218,6 +218,7 @@ footer h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px;
 }
 
 .page-container .feature-content h5{
