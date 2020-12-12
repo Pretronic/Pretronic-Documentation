@@ -58,4 +58,4 @@ Your repository should now look something like the picture, you can also find an
 Make sure that your repository is public.
 
 
-![Example repository]({{config.site_url}}images/example-repo.png)
+![Example repository]( {{config.site_url}} images/example-repo.png)

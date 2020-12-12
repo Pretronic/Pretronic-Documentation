@@ -6,13 +6,13 @@ title: Language provider
 
 The language provider 
 
-=== "ts"
+=== "TypeScript"
 
     ```typescript
     npm install @pretronic/react-github-languages
     ```
 
-=== "js"
+=== "JavaScript"
 
     ```javascript
     yarn add @pretronic/react-github-languages
