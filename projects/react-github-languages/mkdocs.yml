@@ -43,7 +43,7 @@ extra_css:
   - stylesheets/codehilite.css
   - stylesheets/bootstrap-grid.min.css
   - stylesheets/style.css
-  - https://kit.fontawesome.com/3984609dec.js
+  - https://use.fontawesome.com/releases/v5.15.1/css/all.css
 
 nav:
   - Overview: index.md
