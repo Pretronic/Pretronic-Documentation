@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#aggregations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -485,8 +490,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../select/" class="md-nav__link">
-      Select Query
+    <a href="../search/" class="md-nav__link">
+      Search Query
     </a>
   </li>
 
@@ -497,7 +502,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../update.md" class="md-nav__link">
+    <a href="../find/" class="md-nav__link">
+      Find Query
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../update/" class="md-nav__link">
       Update Query
     </a>
   </li>
@@ -509,8 +526,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../delete.md" class="md-nav__link">
+    <a href="../replace/" class="md-nav__link">
+      Replace Query
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../delete/" class="md-nav__link">
       Delete Query
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data-types/" class="md-nav__link">
+      Data Types
     </a>
   </li>
 
@@ -538,10 +579,41 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Aggregations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Aggregations
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-aggregations" class="md-nav__link">
+    List of aggregations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -612,6 +684,36 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-aggregations" class="md-nav__link">
+    List of aggregations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -622,9 +724,40 @@
                   </a>
                 
                 
-                  <h1>Aggregations</h1>
-                
-                
+                <h1 id="aggregations">Aggregations<a class="headerlink" href="#aggregations" title="Permanent link">&para;</a></h1>
+<p>An aggregate function performs a calculation on a set of values, and returns a single value. Aggregate functions
+are often used in where clauses in combination with groupBy.</p>
+<h2 id="list-of-aggregations">List of aggregations<a class="headerlink" href="#list-of-aggregations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aggregation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MIN</code></td>
+<td>This aggregation returns the min value of the given field of the set of result entries</td>
+</tr>
+<tr>
+<td><code>MAX</code></td>
+<td>This aggregation returns the max value of the given field of the set of result entries</td>
+</tr>
+<tr>
+<td><code>COUNT</code></td>
+<td>This aggregations counts the amount of result entries</td>
+</tr>
+<tr>
+<td><code>AVG</code></td>
+<td>This aggregation calculates the average amount of the given field</td>
+</tr>
+<tr>
+<td><code>SUM</code></td>
+<td>This aggregation sums all field values of the given field</td>
+</tr>
+</tbody>
+</table>
                 
                   
                     
@@ -633,7 +766,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-06
+      Last update: 2020-12-12
     
   </small>
 </div>
