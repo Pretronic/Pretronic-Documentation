@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .github {
     height: 100%;
     width: 100%;
