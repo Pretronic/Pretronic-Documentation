@@ -56,12 +56,9 @@ nav:
       - Database Queries:
           - Overview: guides/queries/index.md
           - Insert Query: guides/queries/insert.md
-          - Search Query: guides/queries/search.md
-          - Find Query: guides/queries/find.md
+          - Select Query: guides/queries/select.md
           - Update Query: guides/queries/update.md
-          - Replace Query: guides/queries/replace.md
           - Delete Query: guides/queries/delete.md
-          - Data Types: guides/queries/data-types.md
           - Transactions: guides/queries/transactions.md
           - Aggregations: guides/queries/aggregations.md
   - Javadocs: https://javadocs.pretronic.net/pretronic-databasequery/

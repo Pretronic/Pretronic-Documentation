@@ -1,0 +1,121 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+<style>
+    .md-header {
+        position: initial !important;
+    }
+    .md-main__inner {
+        margin: 0 !important;
+    }
+    .md-tabs {
+        display: none;
+    }
+</style>
+
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="page-container">
+
+            <div class="row" style="align-items: center">
+                <div class="col-12 col-lg-6" style="margin-bottom: 30px;">
+                    <h1>{{config.site_name}}</h1>
+                    <p >{{config.site_description}}</p>
+                    <a href="#projects"
+                       class="md-button md-button--primary"
+                    >
+                        Explore Projects
+                    </a>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <img src="{{config.site_url}}images/overview.svg"  alt="Overview Image"/>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 80px">
+                <div class="col-12 col-lg-6 item discord-container" style="margin-top: 40px">
+                    <div class="discord">
+                        <iframe src="https://discordapp.com/widget?id=513441444959223809&theme=dark" width="350" height="350" allowtransparency="true" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 item" style="margin-top: 40px">
+                    <h1>Join our Community</h1>
+                    <p>
+                        Connect with our team or other people of our community on the Pretronic Discord.
+                        Discuss about projects, ask questions or just talk a little bit.
+                        You have a great idea? Then post your suggestion on our discord and ask for feedback.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 120px">
+                <div class="col-12 col-lg-6 item" style="margin-top: 40px">
+                    <h1>Are you ready to build with us?</h1>
+                    <p>Many of our projects are open source and licensed under the Apache-2 license on GitHub. Feel free to contribute or modify the code for your own use. Connect with our team and other developer, we’d love to see you.</p>
+                </div>
+                <div class="col-12 col-lg-6 item" style="margin-top: 40px">
+                    <div class="github" >
+                        <div>
+                            <a href="https://github.com/pretronic">
+                                <img width="180" src="https://content.pretronic.net/images/github-mark.png"  alt="GitHub Logo"/>
+                            </a>
+                        </div>
+
+                        <div class="view">
+                            <a href="https://github.com/pretronic">Visit as on GitHub </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 style="padding-top: 80px;text-align: center;font-size: 28px" id="projects" >Projects</h4>
+
+            <div class="project-container">
+
+                <div class="project-item" onclick="window.open('https://docs.mcnative.org/')">
+                    <img src="https://content.pretronic.net/products/mcnative/logo.png" alt="Project Icon" width="80"/>
+                    <span class="title">McNative</span>
+                </div>
+
+                <div class="project-item" onclick="window.open('https://dkplugins.pretronic.net/dkbans')">
+                    <img src="https://content.pretronic.net/products/dkbans/logo.png" alt="Project Icon" width="80"/>
+                    <span class="title">DKBans</span>
+                </div>
+
+                <div class="project-item" onclick="window.open('https://dkplugins.pretronic.net/dkcoins')">
+                    <img src="https://content.pretronic.net/products/dkcoins/logo.png" alt="Project Icon" width="80"/>
+                    <span class="title">DKCoins</span>
+                </div>
+
+                <div class="project-item" onclick="window.open('https://dkplugins.pretronic.net/dkperms')">
+                    <img src="https://content.pretronic.net/products/dkperms/logo.png" alt="Project Icon" width="80"/>
+                    <span class="title">DKPerms</span>
+                </div>
+
+                <div class="project-item" onclick="window.open('https://docs.pretronic.net/pretronic-libraries/')">
+                    <img src="https://content.pretronic.net/brand/logo/pretronic-gray.png" alt="Project Icon" width="80"/>
+                    <span class="title">Pretronic Libraries</span>
+                </div>
+
+                <div class="project-item" onclick="window.open('https://docs.pretronic.net/pretronic-database-query/')">
+                    <img src="https://content.pretronic.net/brand/logo/pretronic-gray.png" alt="Project Icon" width="80"/>
+                    <span class="title">Pretronic Database Query</span>
+                </div>
+
+                <div class="project-item" onclick="window.open('https://docs.pretronic.net/react-github-languages/')">
+                    <img src="https://content.pretronic.net/brand/logo/pretronic-gray.png" alt="Project Icon" width="80"/>
+                    <span class="title">React Github Languages</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="navbar-blocker"> </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
