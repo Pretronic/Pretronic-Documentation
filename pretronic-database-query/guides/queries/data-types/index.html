@@ -224,7 +224,9 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -232,9 +234,7 @@
   <li class="md-tabs__item">
     
     
-      
-    
-    <a href="../../.." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Overview
     </a>
   </li>
@@ -335,10 +335,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     <label class="md-nav__link" for="nav-2">
       Guides
       <span class="md-nav__icon md-icon"></span>
@@ -440,10 +442,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
     <label class="md-nav__link" for="nav-2-2">
       Database Queries
       <span class="md-nav__icon md-icon"></span>
@@ -486,8 +490,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../select.md" class="md-nav__link">
-      Select Query
+    <a href="../search/" class="md-nav__link">
+      Search Query
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../find/" class="md-nav__link">
+      Find Query
     </a>
   </li>
 
@@ -522,6 +538,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../replace/" class="md-nav__link">
+      Replace Query
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../transactions/" class="md-nav__link">
       Transactions
     </a>
@@ -537,6 +565,83 @@
     <a href="../aggregations/" class="md-nav__link">
       Aggregations
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DataTypes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      DataTypes
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-data-types" class="md-nav__link">
+    List of data types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datatype-adapter" class="md-nav__link">
+    DataType Adapter
+  </a>
+  
+    <nav class="md-nav" aria-label="DataType Adapter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-own-adapter" class="md-nav__link">
+    Create an own adapter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-data-type-adapters" class="md-nav__link">
+    Default data type adapters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         

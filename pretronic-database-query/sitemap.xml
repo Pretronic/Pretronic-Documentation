@@ -32,6 +32,14 @@
      <lastmod>2020-12-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>http://docs.pretronic.net/pretronic-database-query/guides/queries/search/</loc>
+     <lastmod>2020-12-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://docs.pretronic.net/pretronic-database-query/guides/queries/find/</loc>
+     <lastmod>2020-12-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>http://docs.pretronic.net/pretronic-database-query/guides/queries/update/</loc>
      <lastmod>2020-12-15</lastmod>
      <changefreq>daily</changefreq>
@@ -40,11 +48,19 @@
      <lastmod>2020-12-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>http://docs.pretronic.net/pretronic-database-query/guides/queries/replace/</loc>
+     <lastmod>2020-12-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>http://docs.pretronic.net/pretronic-database-query/guides/queries/transactions/</loc>
      <lastmod>2020-12-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://docs.pretronic.net/pretronic-database-query/guides/queries/aggregations/</loc>
+     <lastmod>2020-12-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://docs.pretronic.net/pretronic-database-query/guides/queries/data-types/</loc>
      <lastmod>2020-12-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
