@@ -616,6 +616,48 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-data-types" class="md-nav__link">
+    List of data types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datatype-adapter" class="md-nav__link">
+    DataType Adapter
+  </a>
+  
+    <nav class="md-nav" aria-label="DataType Adapter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-own-adapter" class="md-nav__link">
+    Create an own adapter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-data-type-adapters" class="md-nav__link">
+    Default data type adapters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -632,6 +674,106 @@
                 
                 
                 <h1 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h1>
+<p>Data Type are the specific data type for a database collection field. While reading or inserting, there can be converted
+with DataType Adapters (Show below).</p>
+<h2 id="list-of-data-types">List of data types<a class="headerlink" href="#list-of-data-types" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>DataType</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DOUBLE</code></td>
+<td>Represent decimal numbers</td>
+</tr>
+<tr>
+<td><code>DECIMAL</code></td>
+<td>Represent decimal numbers</td>
+</tr>
+<tr>
+<td><code>FLOAT</code></td>
+<td>Represent decimal numbers</td>
+</tr>
+<tr>
+<td><code>INTEGER</code></td>
+<td>Represent numbers</td>
+</tr>
+<tr>
+<td><code>LONG</code></td>
+<td>Represent long numbers</td>
+</tr>
+<tr>
+<td><code>CHAR</code></td>
+<td>Represent short amount of characters</td>
+</tr>
+<tr>
+<td><code>STRING</code></td>
+<td>Represent a set of characters</td>
+</tr>
+<tr>
+<td><code>LONG_TEXT</code></td>
+<td>Represent a very long text, in most sql databases, the max size of the column would be multiple gb</td>
+</tr>
+<tr>
+<td><code>DATE</code></td>
+<td>Represent the java date</td>
+</tr>
+<tr>
+<td><code>DATETIME</code></td>
+<td>Represent the datetime</td>
+</tr>
+<tr>
+<td><code>TIMESTAMP</code></td>
+<td>Represent the sql timestamp, it can be got from timestamp long</td>
+</tr>
+<tr>
+<td><code>BINARY</code></td>
+<td>Represent all binary data</td>
+</tr>
+<tr>
+<td><code>UUID</code></td>
+<td>Represent uuid class in java, by default the uuid will be converted to binary</td>
+</tr>
+<tr>
+<td><code>BOOLEAN</code></td>
+<td>Represent boolean</td>
+</tr>
+</tbody>
+</table>
+<h2 id="datatype-adapter">DataType Adapter<a class="headerlink" href="#datatype-adapter" title="Permanent link">&para;</a></h2>
+<p>A data type adapter convert a specific java class to another at inserting and converts it back by reading from the result.</p>
+<h3 id="create-an-own-adapter">Create an own adapter<a class="headerlink" href="#create-an-own-adapter" title="Permanent link">&para;</a></h3>
+<p>In this example, the preregistered uuid type adapter is used. View the <a href="https://github.com/Pretronic/PretronicDatabaseQuery/blob/master/pretronicdatabasequery-api/src/main/java/net/pretronic/databasequery/api/datatype/adapter/defaults/UUIDDataTypeAdapter.java">UUIDTypeAdapter</a> example at github.</p>
+<h4>Write operation</h4>
+<p>The write method will be called by inserting, finding, deleting and updating a value.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">Object</span> <span class="nf">write</span><span class="p">(</span><span class="n">UUID</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">uuidBytes</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">16</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">ByteBuffer</span><span class="p">.</span><span class="na">wrap</span><span class="p">(</span><span class="n">uuidBytes</span><span class="p">)</span>
+            <span class="p">.</span><span class="na">order</span><span class="p">(</span><span class="n">ByteOrder</span><span class="p">.</span><span class="na">BIG_ENDIAN</span><span class="p">)</span>
+            <span class="p">.</span><span class="na">putLong</span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="na">getMostSignificantBits</span><span class="p">())</span>
+            <span class="p">.</span><span class="na">putLong</span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="na">getLeastSignificantBits</span><span class="p">());</span>
+    <span class="k">return</span> <span class="n">uuidBytes</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4>Read operation</h4>
+<p>The read operation will be called by using the getObject(key/index, javaClass) method in QueryResultEntry. If there is
+no adapter registered for the class, an exception will be throwed.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">UUID</span> <span class="nf">read</span><span class="p">(</span><span class="n">Object</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">Convert</span><span class="p">.</span><span class="na">toUUID</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="default-data-type-adapters">Default data type adapters<a class="headerlink" href="#default-data-type-adapters" title="Permanent link">&para;</a></h3>
+<p>By default, there are several data type adapters registered. On your choice, you can register and unregister all adapters
+at runtime.</p>
+<p>Default adapters:
+- UUID
+- InetSocketAddress
+- InetAddress</p>
                 
                   
                     
@@ -640,7 +782,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-12
+      Last update: 2020-12-15
     
   </small>
 </div>
