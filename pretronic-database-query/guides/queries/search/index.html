@@ -498,9 +498,106 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Search Query
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Search Query
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query-operations" class="md-nav__link">
+    Query operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Query operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-selecting" class="md-nav__link">
+    Simple selecting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negation" class="md-nav__link">
+    Negation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andor-queries" class="md-nav__link">
+    And/Or queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-the-result" class="md-nav__link">
+    Limit the result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-the-result" class="md-nav__link">
+    Order the result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-the-query-result" class="md-nav__link">
+    Handling the query result
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling the query result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-size" class="md-nav__link">
+    Checking size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-objects-from-result-entry" class="md-nav__link">
+    Getting objects from result entry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -665,6 +762,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#query-operations" class="md-nav__link">
+    Query operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Query operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-selecting" class="md-nav__link">
+    Simple selecting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#negation" class="md-nav__link">
+    Negation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#andor-queries" class="md-nav__link">
+    And/Or queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-the-result" class="md-nav__link">
+    Limit the result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-the-result" class="md-nav__link">
+    Order the result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-the-query-result" class="md-nav__link">
+    Handling the query result
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling the query result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-size" class="md-nav__link">
+    Checking size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-objects-from-result-entry" class="md-nav__link">
+    Getting objects from result entry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -683,6 +863,68 @@
                 <h1 id="search-query">Search Query<a class="headerlink" href="#search-query" title="Permanent link">&para;</a></h1>
 <p>The search query is the base query of all queries, which can filter. These are the delete, find, update and replace query.
 It is used to filter the result on database side.</p>
+<h2 id="query-operations">Query operations<a class="headerlink" href="#query-operations" title="Permanent link">&para;</a></h2>
+<h3 id="simple-selecting">Simple selecting<a class="headerlink" href="#simple-selecting" title="Permanent link">&para;</a></h3>
+<p>The simplest query is to only filter with one collection field.</p>
+<div class="highlight"><pre><span></span><code><span class="n">QueryResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="p">.</span><span class="na">find</span><span class="p">().</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;Shepard&quot;</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="negation">Negation<a class="headerlink" href="#negation" title="Permanent link">&para;</a></h3>
+<p>To negate a part of a query, you can use the <code>not</code> method in the query. Then you would write in the query consumer all
+the query part on the given position, which should be negated. For some operations, there are default negation method
+implementation, so you have a shorter query.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">not</span><span class="p">(</span><span class="n">query</span> <span class="o">-&gt;</span> <span class="n">query</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;Thomas&quot;</span><span class="p">))</span>
+</code></pre></div>
+<p>For the <code>where</code> operator and other operators are, as it is explained above shorter ways to build the query. For more
+short query parts, see the <a href="https://javadocs.pretronic.net/pretronic-databasequery/1.1.0.24/net/pretronic/databasequery/api/query/type/SearchQuery.html">javadocs</a>.</p>
+<h3 id="andor-queries">And/Or queries<a class="headerlink" href="#andor-queries" title="Permanent link">&para;</a></h3>
+<p><code>And</code> and <code>or</code> operations are used to specify multiple conditions for the query. All query parts in these queries are
+connected with the keyword.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">and</span><span class="p">(</span><span class="n">query</span> <span class="o">-&gt;</span> <span class="n">query</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;Thomas&quot;</span><span class="p">).</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;gender&quot;</span><span class="p">,</span> <span class="s">&quot;MALE&quot;</span><span class="p">))</span>
+
+<span class="n">query</span><span class="p">.</span><span class="na">or</span><span class="p">(</span><span class="n">query</span> <span class="o">-&gt;</span> <span class="n">query</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;Thomas&quot;</span><span class="p">).</span><span class="na">where</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;Peter&quot;</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="limit-the-result">Limit the result<a class="headerlink" href="#limit-the-result" title="Permanent link">&para;</a></h3>
+<p>For limiting the result size, there are several options to use. It is recommended to limit your result size to prevent
+an out of memory exception on your client. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You can only use limit one time in the query</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</code></pre></div>
+<p>To get all results in pagination, there are some useful query tools to make it easier.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">page</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">entriesPerPage</span><span class="p">)</span>
+</code></pre></div>
+<p>You can also get entries with a range of indices.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">index</span><span class="p">(</span><span class="n">startIndex</span><span class="p">,</span> <span class="n">endIndex</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="order-the-result">Order the result<a class="headerlink" href="#order-the-result" title="Permanent link">&para;</a></h3>
+<p>There are many use cases to order a result. You can order your result ascending or descending. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can use order by multiple times in the query</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">orderBy</span><span class="p">(</span><span class="n">fieldToOrder</span><span class="p">,</span> <span class="n">SearchOrder</span><span class="p">.</span><span class="na">ASC</span><span class="o">/</span><span class="n">DESC</span><span class="p">)</span>
+</code></pre></div>
+<p>Also, you can order with an aggregation.</p>
+<h2 id="handling-the-query-result">Handling the query result<a class="headerlink" href="#handling-the-query-result" title="Permanent link">&para;</a></h2>
+<p>A query results holds multiple result entries. One query has one result with multiple result entries, where one
+result entry belongs to one single result (In sql typically one row).</p>
+<h3 id="checking-size">Checking size<a class="headerlink" href="#checking-size" title="Permanent link">&para;</a></h3>
+<p>Before you should work with the result entries, you should check if the result has entries.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this example, only one result entry is got. To get all entries, you should loop through the result</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">result</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="c1">//Do some stuff</span>
+    <span class="n">QueryResultEntry</span> <span class="n">resultEntry</span> <span class="o">=</span> <span class="n">result</span><span class="p">.</span><span class="na">first</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="getting-objects-from-result-entry">Getting objects from result entry<a class="headerlink" href="#getting-objects-from-result-entry" title="Permanent link">&para;</a></h3>
+<p>Every result entry is sorted and one can get values with their index or key.</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">resultEntry</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">);</span>
+</code></pre></div>
                 
                   
                     
