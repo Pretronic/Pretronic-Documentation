@@ -546,9 +546,38 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Replace Query
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Replace Query
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#replace-a-entry" class="md-nav__link">
+    Replace a entry
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -665,6 +694,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#replace-a-entry" class="md-nav__link">
+    Replace a entry
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -681,6 +725,11 @@
                 
                 
                 <h1 id="replace-query">Replace Query<a class="headerlink" href="#replace-query" title="Permanent link">&para;</a></h1>
+<p>The replace query is used to replace an entry with another entry. It is a combination with delete and insert. </p>
+<h2 id="replace-a-entry">Replace a entry<a class="headerlink" href="#replace-a-entry" title="Permanent link">&para;</a></h2>
+<p>Replacing a collection entry with another.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">yourField</span><span class="p">,</span> <span class="n">value</span><span class="p">).</span><span class="na">where</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">yourId</span><span class="p">)</span>
+</code></pre></div>
                 
                   
                     
@@ -689,7 +738,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-12
+      Last update: 2020-12-16
     
   </small>
 </div>
