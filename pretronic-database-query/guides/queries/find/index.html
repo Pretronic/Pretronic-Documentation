@@ -510,9 +510,79 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Find Query
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Find Query
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-entries" class="md-nav__link">
+    Getting entries
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting entries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-getting" class="md-nav__link">
+    Simple getting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-fields-from-specific-database-collection" class="md-nav__link">
+    Getting fields from specific database collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-with-an-alias" class="md-nav__link">
+    Getting with an alias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-with-an-aggregation" class="md-nav__link">
+    Getting with an aggregation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-with-a-function" class="md-nav__link">
+    Getting with a function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -665,6 +735,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-entries" class="md-nav__link">
+    Getting entries
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting entries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-getting" class="md-nav__link">
+    Simple getting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-fields-from-specific-database-collection" class="md-nav__link">
+    Getting fields from specific database collection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-with-an-alias" class="md-nav__link">
+    Getting with an alias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-with-an-aggregation" class="md-nav__link">
+    Getting with an aggregation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-with-a-function" class="md-nav__link">
+    Getting with a function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -681,6 +807,43 @@
                 
                 
                 <h1 id="find-query">Find Query<a class="headerlink" href="#find-query" title="Permanent link">&para;</a></h1>
+<p>The find query is used to get entries from the database. For more information about filtering,
+see on the <a href="">search query page</a>.</p>
+<h2 id="getting-entries">Getting entries<a class="headerlink" href="#getting-entries" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don't specify, which collection fields should be got, all collection fields will be returned</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every time, where a collection is a parameter, you could choose between the database collection object or just 
+the name as a string</p>
+</div>
+<h3 id="simple-getting">Simple getting<a class="headerlink" href="#simple-getting" title="Permanent link">&para;</a></h3>
+<p>To simple get fields, just write all fields in the get method as strings.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;field1&quot;</span><span class="p">,</span> <span class="s">&quot;field2&quot;</span><span class="p">,</span> <span class="s">&quot;field3&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="getting-fields-from-specific-database-collection">Getting fields from specific database collection<a class="headerlink" href="#getting-fields-from-specific-database-collection" title="Permanent link">&para;</a></h3>
+<p>This is used, if you join in multiple database collections, and one collection field is multiple times represented.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="s">&quot;id&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="getting-with-an-alias">Getting with an alias<a class="headerlink" href="#getting-with-an-alias" title="Permanent link">&para;</a></h3>
+<p>This is used, if you want to have another name of the field in your result. It is needed, if you want to get two or
+more fields, which are multiple represented in the result, for example because of a join.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;field1&quot;</span><span class="p">,</span> <span class="s">&quot;someOtherName&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>This is also available with a database collection.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">collection</span><span class="p">,</span> <span class="s">&quot;field1&quot;</span><span class="p">,</span> <span class="s">&quot;someOtherName&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="getting-with-an-aggregation">Getting with an aggregation<a class="headerlink" href="#getting-with-an-aggregation" title="Permanent link">&para;</a></h3>
+<p>This is used, if you would like to handle your result with an aggregation, like summing all numbers of a field.</p>
+<div class="highlight"><pre><span></span><code><span class="n">query</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Aggregation</span><span class="p">.</span><span class="na">SUM</span><span class="p">,</span> <span class="s">&quot;money&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="getting-with-a-function">Getting with a function<a class="headerlink" href="#getting-with-a-function" title="Permanent link">&para;</a></h3>
+<p>query.getFunction(yourFunction, "returnName")</p>
+<p>These functions are available</p>
+<h4>RowNumberQueryFunction</h4>
+<p>QueryFunction.rowNumberFunction(orderField, order)</p>
                 
                   
                     
@@ -689,7 +852,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-12-12
+      Last update: 2020-12-16
     
   </small>
 </div>
