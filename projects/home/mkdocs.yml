@@ -33,6 +33,10 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+      
+google_analytics:
+  - 256126906
+  - auto
 
 plugins:
   - search
