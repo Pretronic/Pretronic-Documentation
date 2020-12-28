@@ -34,6 +34,10 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
+google_analytics:
+  - G-FR8HP348XX
+  - auto
+
 plugins:
   - search
   - git-revision-date
