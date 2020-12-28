@@ -37,6 +37,10 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date
+  
+google_analytics:
+  - G-FR8HP348XX
+  - auto
 
 extra_css:
   - stylesheets/dark_theme.css
