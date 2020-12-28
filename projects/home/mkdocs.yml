@@ -35,8 +35,7 @@ markdown_extensions:
       toc_depth: 3
       
 google_analytics:
-  - 256126906
-  - auto
+  - G-FR8HP348XX
 
 plugins:
   - search
