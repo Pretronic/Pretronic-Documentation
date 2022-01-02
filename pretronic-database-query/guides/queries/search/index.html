@@ -12,9 +12,8 @@
       
         <link rel="canonical" href="http://docs.pretronic.net/pretronic-database-query/guides/queries/search/">
       
-      
-      <link rel="shortcut icon" href="https://content.pretronic.net/brand/logo/pretronic-gray.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+      <link rel="icon" href="https://content.pretronic.net/brand/logo/pretronic-gray.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
     
     
       
@@ -22,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.19753c6b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bb3983ee.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -37,11 +36,10 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
-    
     
     
       <link rel="stylesheet" href="../../../stylesheets/dark_theme.css">
@@ -52,9 +50,9 @@
     
       <link rel="stylesheet" href="../../../stylesheets/style.css">
     
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
 
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FR8HP348XX"></script>
     <script>
@@ -80,7 +78,6 @@
   })
      
     </script>
-      
     
     
   </head>
@@ -92,10 +89,9 @@
     
     
     <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="indigo" data-md-color-accent="indigo">
-      
-        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
-      
   
+    
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -111,20 +107,20 @@
       
     </div>
     
-      <!-- Application header -->
-<header class="md-header" data-md-component="header">
-
-
-
-    <!-- Top-level navigation -->
-    <nav class="md-header-nav md-grid" aria-label="Header">
+    
+      <header class="md-header" data-md-component="header">
+    <nav
+            class="md-header__inner md-grid"
+            aria-label="Header"
+    >
 
         <!-- Link to home -->
         <a
-                href="https://docs.pretronic.net/"
+                href="../../.."
                 title="Pretronic Database Query"
-                class="md-header-nav__button md-logo"
+                class="md-header__button md-logo"
                 aria-label="Pretronic Database Query"
+                data-md-component="logo"
         >
             
   <img src="https://content.pretronic.net/brand/logo/pretronic-gray.png" alt="logo">
@@ -132,83 +128,94 @@
         </a>
 
         <!-- Button to open drawer -->
-        <label class="md-header-nav__button md-icon" for="__drawer">
+        <label class="md-header__button md-icon" for="__drawer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
         </label>
 
         <!-- Header title -->
-        <div class="md-header-nav__title" >
-            
-            <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
-            Pretronic Database Query
-          </span>
-                <span class="md-header-nav__topic md-ellipsis">
+        <div class="md-header__title" >
+            <div class="md-header__ellipsis">
+                <div class="md-header__topic">
+                    <span class="md-ellipsis">
+                        Pretronic Database Query
+                    </span>
+                </div>
+                <div class="md-header__topic" >
+          <span class="md-ellipsis">
             
               Search Query
             
           </span>
+                </div>
             </div>
-            
         </div>
 
-        <div>
-            <div style="display: flex;align-items: center">
-
-                <span class="project-list">
+        <form class="md-header__option" >
+         <span class="project-list">
                     Projects
                     <span class="md-nav__icon md-icon icon" ></span>
                 </span>
 
-                <div class="project-list-dialog">
-                    <div class="row">
-                        <div class="col-4">
-                            <h1>McNative</h1>
-                            <ul>
-                                <li><a href="https://docs.mcnative.org/server/" >Server</a></li>
-                                <li><a href="https://docs.mcnative.org/plugins/" >Plugins</a></li>
-                                <li><a href="https://docs.mcnative.org/console/" >Console</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <h1>DKPlugins</h1>
-                            <ul>
-                                <li><a href="https://dkplugins.pretronic.net/dkperms/" >DKPerms</a></li>
-                                <li><a href="https://dkplugins.pretronic.net/dkbans/" >DKBans</a></li>
-                                <li><a href="https://dkplugins.pretronic.net/dkcoins/" >DKCoins</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <h1>Open Source</h1>
-                            <ul>
-                                <li><a href="https://docs.pretronic.net/pretronic-libraries/" >Pretronic Libraries</a></li>
-                                <li><a href="https://docs.pretronic.net/pretronic-database-query/" >Pretronic Database Query</a></li>
-                                <li><a href="https://docs.pretronic.net/react-github-languages/" >React Github Languages</a></li>
-                            </ul>
-                        </div>
+            <div class="project-list-dialog">
+                <div class="row">
+                    <div class="col-4">
+                        <h1>DKPlugins</h1>
+                        <ul>
+                            <li><a href="https://dkplugins.pretronic.net/dkbans/" >DKBans</a></li>
+                            <li><a href="https://dkplugins.pretronic.net/dkcoins/" >DKCoins</a></li>
+                            <li><a href="https://dkplugins.pretronic.net/dkperms/" >DKPerms</a></li>
+                            <li><a href="https://dkplugins.pretronic.net/dkfriends/" >DKFriends</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h1 style="visibility: hidden"> Placeholder </h1>
+                        <ul>
+                            <li><a href="https://dkplugins.pretronic.net/dkconnect/" >DKConnect</a></li>
+                            <li><a href="https://dkplugins.pretronic.net/dksupport/" >DKSupport</a></li>
+                            <li><a href="https://dkplugins.pretronic.net/dkmotd/" >DKMotd</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h1>Open Source</h1>
+                        <ul>
+                            <li><a href="https://docs.pretronic.net/pretronic-libraries/" >Pretronic Libraries</a></li>
+                            <li><a href="https://docs.pretronic.net/pretronic-database-query/" >Pretronic Database Query</a></li>
+                            <li><a href="https://docs.pretronic.net/react-github-languages/" >React Github Languages</a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </form>
 
-                <!-- Button to open search dialogue -->
-                
-                <label class="md-header-nav__button md-icon" for="__search">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-                </label>
+        <!-- Color palette -->
+        
 
-                <!-- Search interface -->
-                
-<div class="md-search" data-md-component="search" role="dialog">
+        <!-- Site language selector -->
+        
+
+        <!-- Button to open search modal -->
+        
+        <label class="md-header__button md-icon" for="__search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        </label>
+
+        <!-- Search interface -->
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -222,13 +229,12 @@
     </div>
   </div>
 </div>
-                
+        
 
-                <!-- Repository containing source -->
-                
-                <div class="md-header-nav__source">
-                    
-<a href="https://github.com/Pretronic/PretronicDatabaseQuery/" title="Go to repository" class="md-source">
+        <!-- Repository containing source -->
+        
+        <div class="md-header-nav__source">
+            <a href="https://github.com/Pretronic/PretronicDatabaseQuery/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -237,11 +243,8 @@
     PretronicDatabaseQuery
   </div>
 </a>
-                </div>
-                
-            </div>
         </div>
-
+        
     </nav>
 </header>
     
@@ -250,17 +253,17 @@
       
         
           
-
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
+  
+  
+
+
   <li class="md-tabs__item">
-    
-    
     <a href="../../.." class="md-tabs__link">
       Overview
     </a>
@@ -271,13 +274,19 @@
   
   
     
+  
+
+
+  
+  
+  
     
+
+  
   
   
     <li class="md-tabs__item">
-      
-      
-      <a href="../../project-setup/include-in-project/" class="md-tabs__link">
+      <a href="../../project-setup/include-in-project/" class="md-tabs__link md-tabs__link--active">
         Guides
       </a>
     </li>
@@ -287,6 +296,10 @@
 
       
         
+  
+  
+
+
   <li class="md-tabs__item">
     <a href="https://javadocs.pretronic.net/pretronic-databasequery/" class="md-tabs__link">
       Javadocs
@@ -297,9 +310,12 @@
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-      
       <a href="../../../changelog/" class="md-tabs__link">
         Changelog
       </a>
@@ -310,20 +326,25 @@
     </ul>
   </div>
 </nav>
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="http://docs.pretronic.net/pretronic-database-query/" title="Pretronic Database Query" class="md-nav__button md-logo" aria-label="Pretronic Database Query">
+    <a href="../../.." title="Pretronic Database Query" class="md-nav__button md-logo" aria-label="Pretronic Database Query" data-md-component="logo">
       
   <img src="https://content.pretronic.net/brand/logo/pretronic-gray.png" alt="logo">
 
@@ -332,8 +353,7 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/Pretronic/PretronicDatabaseQuery/" title="Go to repository" class="md-source">
+      <a href="https://github.com/Pretronic/PretronicDatabaseQuery/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -350,12 +370,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../.." class="md-nav__link">
-      Overview
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
 
     
       
@@ -363,179 +386,218 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-    <label class="md-nav__link" for="nav-2">
-      Guides
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Guides" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
-    <label class="md-nav__link" for="nav-2-1">
-      Project setup
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Project setup" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-1">
-        <span class="md-nav__icon md-icon"></span>
-        Project setup
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../project-setup/include-in-project/" class="md-nav__link">
-      Include in project
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../project-setup/driver-config-setup/" class="md-nav__link">
-      Driver Configuration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../project-setup/driver-setup/" class="md-nav__link">
-      Driver Setup
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../project-setup/database/" class="md-nav__link">
-      Database
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../project-setup/database-collection/" class="md-nav__link">
-      Database Collection
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
-    <label class="md-nav__link" for="nav-2-2">
-      Database Queries
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Database Queries" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
-        <span class="md-nav__icon md-icon"></span>
-        Database Queries
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../insert/" class="md-nav__link">
-      Insert Query
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
-
-
-  <li class="md-nav__item md-nav__item--active">
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Project setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Project setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Project setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/include-in-project/" class="md-nav__link">
+        Include in project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/driver-config-setup/" class="md-nav__link">
+        Driver Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/driver-setup/" class="md-nav__link">
+        Driver Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/database/" class="md-nav__link">
+        Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-setup/database-collection/" class="md-nav__link">
+        Database Collection
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Database Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Database Queries" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Database Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insert/" class="md-nav__link">
+        Insert Query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Search Query
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Search Query
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Search Query
-    </a>
-    
+      </a>
       
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -545,7 +607,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#query-operations" class="md-nav__link">
@@ -625,151 +687,184 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../find/" class="md-nav__link">
+        Find Query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        Update Query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete/" class="md-nav__link">
+        Delete Query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../replace/" class="md-nav__link">
+        Replace Query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aggregations/" class="md-nav__link">
+        Aggregations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-types/" class="md-nav__link">
+        DataTypes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-  </li>
+      
+      
+      
 
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../find/" class="md-nav__link">
-      Find Query
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../update/" class="md-nav__link">
-      Update Query
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../delete/" class="md-nav__link">
-      Delete Query
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../replace/" class="md-nav__link">
-      Replace Query
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../transactions/" class="md-nav__link">
-      Transactions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../aggregations/" class="md-nav__link">
-      Aggregations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../data-types/" class="md-nav__link">
-      DataTypes
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://javadocs.pretronic.net/pretronic-databasequery/" class="md-nav__link">
+        Javadocs
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="https://javadocs.pretronic.net/pretronic-databasequery/" class="md-nav__link">
-      Javadocs
-    </a>
-  </li>
-
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-    <label class="md-nav__link" for="nav-4">
-      Changelog
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Changelog" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
-        Changelog
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      
+        <label class="md-nav__link" for="__nav_4">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Changelog" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Changelog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/" class="md-nav__link">
+        Versions
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../changelog/" class="md-nav__link">
-      Versions
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -779,11 +874,14 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -793,7 +891,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#query-operations" class="md-nav__link">
@@ -878,16 +976,16 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/docs/guides/queries/search.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="search-query">Search Query<a class="headerlink" href="#search-query" title="Permanent link">&para;</a></h1>
+<a href="https://github.com/Pretronic/Pretronic-Documentation/edit/main/projects/pretronic-database-query/docs/guides/queries/search.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="search-query">Search Query<a class="headerlink" href="#search-query" title="Permanent link">&para;</a></h1>
 <p>The search query is the base query of all queries, which can filter. These are the delete, find, update and replace query.
 It is used to filter the result on database side.</p>
 <h2 id="query-operations">Query operations<a class="headerlink" href="#query-operations" title="Permanent link">&para;</a></h2>
@@ -952,29 +1050,22 @@ result entry belongs to one single result (In sql typically one row).</p>
 <p>Every result entry is sorted and one can get values with their index or key.</p>
 <div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">resultEntry</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">);</span>
 </code></pre></div>
-                
-                  
-                    
 
-<hr>
-<div class="md-source-date">
+  <hr>
+<div class="md-source-file">
   <small>
     
-      Last update: 2020-12-15
+      Last update:
+      2020-12-15
     
   </small>
 </div>
-                  
-                
-              
-              
-                
-
 
               
             </article>
           </div>
         </div>
+        
       </main>
       
         <footer class="section area-footer">
@@ -983,7 +1074,7 @@ result entry belongs to one single result (In sql typically one row).</p>
 
             <div class="col-lg-3 col-sm-6 mb-4 mb-xl-0">
                 <div class="brand">
-                    <img class="img-fluid" alt="Brand" width="200" height="60" src="https://content.pretronic.net/brand/logo/pretronic-text.png">
+                    <img class="img-fluid" alt="Brand" width="200" src="https://content.pretronic.net/brand/pretronic-text-light.png">
                 </div>
             </div>
 
@@ -1000,15 +1091,18 @@ result entry belongs to one single result (In sql typically one row).</p>
             <div class="col-lg-3 col-sm-6 mb-4 mb-xl-0 ">
                 <h4>DKPlugins</h4>
                 <ul>
-                    <li><a href="https://dkplugins.pretronic.net/dkperms">DKPerms</a></li>
                     <li><a href="https://dkplugins.pretronic.net/dkbans">DKBans</a></li>
-                    <li><a href="https://dkplugins.pretronic.net/dkcoins/">DKCoins</a></li>
+                    <li><a href="https://dkplugins.pretronic.net/dkcoins">DKCoins</a></li>
+                    <li><a href="https://dkplugins.pretronic.net/dkperms">DKPerms</a></li>
+                    <li><a href="https://dkplugins.pretronic.net/dkfriends">DKFriends</a></li>
+                    <li><a href="https://dkplugins.pretronic.net/dkconnect">DKConnect</a></li>
+                    <li><a href="https://dkplugins.pretronic.net/dksupport">DKSupport</a></li>
+                    <li><a href="https://dkplugins.pretronic.net/dkmotd">DKMotd</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-sm-6 mb-4 mb-xl-0 ">
                 <h4>Open Source</h4>
                 <ul>
-                    <li><a href="https://mcnative.org">McNative</a></li>
                     <li><a href="https://docs.pretronic.net/pretronic-libraries/" >Pretronic Libraries</a></li>
                     <li><a href="https://docs.pretronic.net/pretronic-database-query/" >Pretronic Database Query</a></li>
                     <li><a href="https://docs.pretronic.net/react-github-languages/" >React GitHub Languages</a></li>
@@ -1018,7 +1112,7 @@ result entry belongs to one single result (In sql typically one row).</p>
         <div class="footer-min">
             <ul>
                 <li><a href="https://pretronic.net/privacy">Privacy & cookies</a></li>
-                <li><a href="https://pretronic.net/imprint">Impressum</a></li>
+                <li><a href="https://pretronic.net/imprint">Imprint</a></li>
                 <li>
                     © Pretronic
                     <script>document.write(new Date().getFullYear());</script>
@@ -1027,26 +1121,20 @@ result entry belongs to one single result (In sql typically one row).</p>
 
             <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
                 <a href="#"><i class="Privacy & Cookies"></i></a>
-                <a href="#"><i class="Impressum"></i></a>
+                <a href="#"><i class="Imprint"></i></a>
             </div>
         </div>
     </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.361d90f1.min.js"}</script>
     
-      <script src="../../../assets/javascripts/vendor.0ac82a11.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../../..",
-          features: ['navigation.tabs'],
-          search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../../assets/javascripts/bundle.289a2a4b.min.js"></script>
       
     
   </body>
