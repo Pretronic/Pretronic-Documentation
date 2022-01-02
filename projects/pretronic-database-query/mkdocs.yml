@@ -34,6 +34,10 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
+google_analytics:
+  - G-FR8HP348XX
+  - auto
+
 plugins:
   - search
   - git-revision-date
@@ -56,11 +60,14 @@ nav:
       - Database Queries:
           - Overview: guides/queries/index.md
           - Insert Query: guides/queries/insert.md
-          - Select Query: guides/queries/select.md
+          - Search Query: guides/queries/search.md
+          - Find Query: guides/queries/find.md
           - Update Query: guides/queries/update.md
           - Delete Query: guides/queries/delete.md
+          - Replace Query: guides/queries/replace.md
           - Transactions: guides/queries/transactions.md
           - Aggregations: guides/queries/aggregations.md
+          - DataTypes: guides/queries/data-types.md
   - Javadocs: https://javadocs.pretronic.net/pretronic-databasequery/
   - Changelog:
       Versions: changelog/index.md
