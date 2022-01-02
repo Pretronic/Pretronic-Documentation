@@ -12,12 +12,28 @@ theme:
     - stylesheets/style.css
   icon:
     repo: fontawesome/brands/github
-  logo: https://content.pretronic.net/brand/logo/pretronic-gray.png
-  favicon: https://content.pretronic.net/brand/logo/pretronic-gray.png
+  logo: https://content.pretronic.net/brand/logo/pretronic-blue.png
+  favicon: https://content.pretronic.net/brand/logo/pretronic-blue.png
   palette:
-    scheme: preference
-    primary: 'indigo'
-    accent: 'indigo'
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 markdown_extensions:
   - pymdownx.highlight
@@ -37,17 +53,14 @@ markdown_extensions:
 plugins:
   - search
   - git-revision-date
-  
+
 google_analytics:
   - G-FR8HP348XX
   - auto
 
 extra_css:
-  - stylesheets/dark_theme.css
-  - stylesheets/codehilite.css
   - stylesheets/bootstrap-grid.min.css
   - stylesheets/style.css
-  - https://use.fontawesome.com/releases/v5.15.1/css/all.css
 
 nav:
   - Overview: index.md
